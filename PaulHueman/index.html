@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>PaulHueman Renewal</title>
+    <link rel="stylesheet" href="Paulhueman.css">
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://kit.fontawesome.com/82fd850f0d.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header_search" id="changecolor">
+                <div class="language">
+                    <ul class="lan_depth1">
+                        <li><a href="#">GLOBAL SHIPPING <span><i class="fa-solid fa-caret-down"></i></span></a>
+                        <ul class="lan_depth2">
+                            <li><a href="#">ENG</a></li>
+                            <li><a href="#">CHA
+                            </a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search_item">
+                    <ul class="sear_depth1">
+                        <li><a href="#">마이페이지</a>
+                            <ul class="sear_depth2">
+                                <li><a href="#">MY ACCOUNT</a></li>
+                                <li><a href="#">ORDERS</a></li>
+                                <li><a href="login.html" target="section" onclick="changecolor();" >LOGIN</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><img src="images/ico_basket.png" alt=""></a></li>
+                        <li><input type="text" placeholder="Search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_title">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="header_navi">
+                <ul class="navi_depth1">
+                    <li><a href="sunglass.html" target="section" onclick="changecolor();">SHOP</a>
+                        <ul class="navi_depth2">
+                            <li><a href="sunglass.html" target="section" onclick="changecolor();">SUNGLASSES</a></li>
+                            <li><a href="glass.html" target="section" onclick="changecolor();">GLASSES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="brand.html" target="section" onclick="changecolor();">BRAND</a></li>
+                    <li><a href="celeb.html" target="section" onclick="changecolor();">CAMPAIGN</a>
+                        <ul class="navi_depth2">
+                            <li><a href="celeb.html" target="section" onclick="changecolor();">CELEB</a></li>
+                            <li><a href="#">LOOKBOOK</a></li>
+                            <li><a href="#">VIDEO</a></li>
+                            <li><a href="media.html" target="section" onclick="changecolor();">MEDIA</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="stockists.html" target="section" onclick="changecolor();">STOCKISTS</a></li>
+                </ul>
+            </div>
+        </header>
+        <iframe src="" frameborder="0" width="100%" height="960px" name="section">
+            <section></section>
+        </iframe>
+      
+        <footer>
+            <p>
+                COMPANY. BANDO OPTICAL CORP. OFFICE. #237 NOWONRO, BUK-GU, DAEGU, SOUTH KOREA <br>
+                CEO. LEE SANG TAK LICENSE. 504-81-89393 [COMPANY INFORMATION] MAIL ORDER LICENSE. 2017-DAEGU BUKGU-0094 COPYRIGHT@PAULHUEMAN
+            </p>
+            <div class="footer_item">
+                <div class="menu_item">
+                    <ul>
+                        <li><a href="#">TERMS</a></li>
+                        <li><a href="#">PRIVACY</a></li>
+                        <li><a href="#">INQUIRY</a></li>
+                    </ul>
+                </div>
+                <div class="menu_icon">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-blog"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script>
+        function changecolor(){
+           let elem = document.querySelector(".header_search");
+           let elem2 = document.querySelector(".header_search .lan_depth1 a");
+           let elem3 = document.querySelector(".header_search .sear_depth1 a");
+           let elem4 = document.querySelector(".header_search .sear_depth1 input");
+           let elem5 = document.querySelector(".header_search .sear_depth1 i");
+           let elem6 = document.querySelector(".header_title");
+           let elem7 = document.querySelector(".header_navi");
+
+           elem.style.backgroundColor = "rgb(59,59,59)";
+           elem2.style.color = "white";
+           elem3.style.color = "white";
+           elem4.style.borderBottomColor = "white";
+           elem5.style.color = "white";
+           elem6.style.backgroundColor = "white";
+           elem7.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+</html>

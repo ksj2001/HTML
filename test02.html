@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>목록 연습</title>
+    <style>
+        ol{
+            color: rgb(55, 0, 255);
+        }
+    </style>
+</head>
+<body>
+    <!-- orderedList로 목록 만들기 -->
+    <ol type = "A">
+        <li>순서가 있는 목록 1</li>
+        <li>순서가 있는 목록 2</li>
+        <li>순서가 있는 목록 3</li>
+        <li>순서가 있는 목록 4</li>
+        <li>순서가 있는 목록 5</li>
+    </ol>
+    <!-- unorderedList로 목록 만들기 -->
+    <ul type = "circle">
+        <li type = "square">순서가 없는 목록</li>
+        <li type = "circle">순서가 없는 목록</li>
+        <li type = "disc">순서가 없는 목록</li>
+        <li>순서가 없는 목록</li>
+        <li>순서가 없는 목록</li>
+    </ul>
+    <!-- orderedList + unorderedList로 목록 만들기 -->
+    <ol>
+        <li>목록 1
+            <ul>
+                <li>목록 1</li>
+                <li>목록 2</li>
+            </ul>
+        </li>
+        <li>목록 2
+            <ul type = "square">
+                <li>목록 1</li>
+                <li>목록 2</li>
+            </ul>
+        </li>
+        <li>목록 3
+            <ul type = "disc">
+                <li>목록 1</li>
+                <li>목록 1</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>

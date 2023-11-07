@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Sunglasses</title>
+    <link rel="stylesheet" href="sunglass.css">
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://kit.fontawesome.com/82fd850f0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="shop">
+            <h2>SHOP</h2>
+            <ul>
+                <li class><a href="sunglass.html" target="section" >SUNGLASSES</a></li>
+                <li class><a href="glass.html" target="section" >GLASSES</a></li>
+            </ul>
+        </div>
+        
+        <div class="product">
+            <!-- 상품목록 시작 -->
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_0.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>4 COLORS</p>
+                    <p>PHS-1155A</p>
+                    <p>&nbsp;</p>
+                    <p>252,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_1.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHS-1158A</p>
+                    <p>&nbsp;</p>
+                    <p>260,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_2.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHS-1156A</p>
+                    <p>&nbsp;</p>
+                    <p>260,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_3.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHS-2047D</p>
+                    <p>&nbsp;</p>
+                    <p>224,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_4.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>4 COLORS</p>
+                    <p>PHS-1161B</p>
+                    <p>&nbsp;</p>
+                    <p>212,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_5.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>4 COLORS</p>
+                    <p>PHS-1160B</p>
+                    <p>&nbsp;</p>
+                    <p>212,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_6.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHS-1162A</p>
+                    <p>&nbsp;</p>
+                    <p>260,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_7.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHS-2052B</p>
+                    <p>&nbsp;</p>
+                    <p>240,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_8.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>4 COLORS</p>
+                    <p>PHS-1159D</p>
+                    <p>&nbsp;</p>
+                    <p>212,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_9.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHS-1154A</p>
+                    <p>&nbsp;</p>
+                    <p>240,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_10.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHS-1153A</p>
+                    <p>&nbsp;</p>
+                    <p>240,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/sunglasses/origin_11.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHS-1152A</p>
+                    <p>&nbsp;</p>
+                    <p>240,000won</p>
+                </div>
+            </div>
+            <!-- 상품목록 끝 -->
+        </div>
+    </div>
+
+    <script>
+        let img = document.querySelectorAll(".image a img");
+
+        for(let i=0;i<img.length;i++){
+            img[i].addEventListener
+            ("mouseover",function(){
+                let newImg = "images/sunglasses/info_"+i+".png";
+                // console.log(newImg);
+                img[i].setAttribute("src",newImg);
+                // img[i].style.transition = '0.5s';
+            });
+            img[i].addEventListener
+            ("mouseout",function(){
+                let newImg = "images/sunglasses/origin_"+i+".png";
+                img[i].setAttribute("src",newImg);
+            });
+        }
+
+        let aline = document.querySelectorAll(".container .shop ul li a");
+        // let active = document.querySelectorAll(".container ul li a");
+      
+        for(let i=0;i<aline.length;i++){
+            console.log(i);
+           aline[i].addEventListener("click",() => {
+              for(let j=0;j<aline.length;j++){
+                aline[j].style.borderBottom = "none";
+              }
+              aline[i].style.borderBottom = "2px solid lightgray";
+           })
+        }
+    </script>
+</body>
+</html>

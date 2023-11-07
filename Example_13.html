@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>소비자 가격</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 700px;
+            height: 180px;
+            table-layout: fixed;
+        }
+        caption{
+            text-align: right;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        thead{
+            height: 60px;
+        }
+        th{
+            background-color: blue;
+            color: white;
+        }
+        th,td{
+            text-align: center;
+        }
+        .price{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <caption>(본사 정식 소비자 가격)</caption>
+        <thead>
+            <tr>
+                <th colspan="2">제품명</th>
+                <th>★★★★★★★<br>버텍스</th>
+                <th>★★★★★<br>래티튜드</th>
+                <th>★★★★<br>아티젠IB</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2" class="price">국내차량</td>
+                <td class="price">썬루프</td>
+                <td>150,000</td>
+                <td>90,000</td>
+                <td>170,000</td>
+            </tr>
+            <tr>
+                <td class="price">파노라마 썬루프</td>
+                <td>330,000</td>
+                <td>200,000</td>
+                <td>170,000</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="price">수입차량</td>
+                <td class="price">썬루프</td>
+                <td>180,000</td>
+                <td>110,000</td>
+                <td>90,000</td>
+            </tr>
+            <tr>
+                <td class="price">썬루프</td>
+                <td>350,000</td>
+                <td>240,000</td>
+                <td>200,000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

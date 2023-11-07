@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        .container{
+            width: 232px;
+            height: 217px;
+            background-image: url(images/programmer.png);
+            background-color: red;
+            /* border: 1px solid black; */
+            animation-name: ani;
+            animation-duration: 6s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            position: relative;
+        }
+        @keyframes ani{
+            0%{
+                left: 0;
+                top: 0;
+            }
+            25%{
+                left: 200px;
+                top: 0;
+                /* background-color: blue; */
+                background-image: url(images/americano.jpg);
+                /* transform: translateX(100px); */
+            }
+            50%{
+                left: 200px;
+                top: 200px;
+                background-color: gold;
+                background-image: url(images/cafelatte.jpg);
+            }
+            75%{
+                left: 0;
+                top: 200px;
+                background-color: green;
+                background-image: url(images/cappuccino.jpg);
+            }
+            100%{
+                left: 0;
+                top: 0;
+                background-color: dodgerblue;
+                background-image: url(images/coffee1.gif);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>

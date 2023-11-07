@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/82fd850f0d.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            line-height: 1.5em;
+            /* font-weight: 600; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: black;
+        }
+        form input[type=checkbox]{
+            display: none;
+        }
+        form label{
+            display: block;
+        }
+        /* 가상 클래스 before을 이용하여 fontawesome을 유니코드로 삽입
+            단, before 가상 클래스는 input 태그에는 사용 불가능.
+            하지만 label 태그에는 사용 가능하다
+        */
+        form label::before{
+            content: '\f192';
+            /* 반드시 fontawesome을 font-family를 fontawesome으로 지정해줘야 한다. f192 f00*/
+            font-family: "Font Awesome 5 Free";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 1px solid lightgray;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 14px;
+            font-size: 12px;
+            font-weight: 900;
+            margin-right: 5px;
+            color: transparent;
+            transition: 0.2s;
+        }
+        form input[type=checkbox]:checked + label::before{
+            /* background-color: purple; */
+            color: purple;
+            border-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="checkbox" id="check1">
+        <label for="check1">HTML</label>
+        <input type="checkbox" id="check2">
+        <label for="check2">CSS</label>
+        <input type="checkbox" id="check3">
+        <label for="check3">jQuery</label>
+        <input type="checkbox" id="check4">
+        <label for="check4">UIKit</label>
+        
+    </form>
+</body>
+</html>

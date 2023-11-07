@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 1200px;
+    height: 1600px;
+    /* display: flex; */
+    margin-top: 178px;
+}
+.container .title{
+    width: 1200px;
+}
+.container .title h2{
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 70px;
+}
+.container .search{
+    display: flex;
+    justify-content: center;
+    width: 575px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: #eee;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+.container .search form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .search form .select1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    height: 30px;
+    border-bottom: 1px solid lightgray;
+    margin-right: 15px;
+}
+.container .search form .select2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    height: 30px;
+    border-bottom: 1px solid lightgray;
+    margin-right: 15px;
+}
+.container .search form select{
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    color: gray;
+}
+.container .search form .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    border-bottom: 1px solid lightgray;
+}
+.container .search form .input input{
+    background-color: transparent;
+    border: none;
+}
+.container .search .searchicon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+.container .stockists-list{
+    width: 1200px;
+    height: 1150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 110px;
+}
+.container .stockists-list .list{
+    width: 400px;
+    height: 260px;
+    padding: 0 65px;
+}
+.container .stockists-list .list .content{
+    width: 270px;
+    height: 80px; 
+}
+.container .stockists-list .list .content h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+.container .stockists-list .list .content p{
+    font-size: 12px;
+}

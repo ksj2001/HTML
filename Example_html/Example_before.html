@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Before After 가상클래스</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            line-height: 1.5em;
+            font-weight: 600;
+            font-size: 30px;
+            color: black;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .gnb a::before{
+            content: '01';
+            margin-right: 5px;
+            padding: 4px;
+            font-size: 18px;
+            background-color: royalblue;
+            color: white;
+            border-radius: 50%;
+        }
+        .gnb a::after{
+            /* after나 before 가상클래스는 반드시 contents를 먼저 작성한다. */
+            content: 'update';
+            margin-left: 10px;
+            padding: 4px;
+            font-size: 18px;
+            background-color: crimson;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gnb">
+        <a href="#">CoodingWorks Online Class</a>
+    </div>
+</body>
+</html>

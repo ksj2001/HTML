@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Sunglasses</title>
+    <link rel="stylesheet" href="glass.css">
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://kit.fontawesome.com/82fd850f0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="shop">
+            <h2>SHOP</h2>
+            <ul>
+                <li class><a href="sunglass.html" target="section">SUNGLASSES</a></li>
+                <li class><a class="active" href="glass.html" target="section">GLASSES</a></li>
+            </ul>
+        </div>
+        
+        <div class="product">
+            <!-- 상품목록 시작 -->
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_0.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>4 COLORS</p>
+                    <p>PHF-524B</p>
+                    <p>&nbsp;</p>
+                    <p>252,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_1.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHF-525B</p>
+                    <p>&nbsp;</p>
+                    <p>260,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_2.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHF-526B</p>
+                    <p>&nbsp;</p>
+                    <p>260,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_3.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHF-527B</p>
+                    <p>&nbsp;</p>
+                    <p>224,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_4.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>4 COLORS</p>
+                    <p>PHF-528B</p>
+                    <p>&nbsp;</p>
+                    <p>212,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_5.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>4 COLORS</p>
+                    <p>PHF-529B</p>
+                    <p>&nbsp;</p>
+                    <p>212,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_6.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHF-530D</p>
+                    <p>&nbsp;</p>
+                    <p>260,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_7.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHF-531D</p>
+                    <p>&nbsp;</p>
+                    <p>240,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_8.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>4 COLORS</p>
+                    <p>PHF-5255A</p>
+                    <p>&nbsp;</p>
+                    <p>212,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_9.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHF-5256A</p>
+                    <p>&nbsp;</p>
+                    <p>240,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_10.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHF-5257B</p>
+                    <p>&nbsp;</p>
+                    <p>240,000won</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="image">
+                    <a href="#"><img src="images/glasses/origin_11.png" alt=""></a>
+                </div>
+                <div class="details">
+                    <p>3 COLORS</p>
+                    <p>PHF-5258B</p>
+                    <p>&nbsp;</p>
+                    <p>240,000won</p>
+                </div>
+            </div>
+            <!-- 상품목록 끝 -->
+        </div>
+    </div>
+
+    <script>
+        let img = document.querySelectorAll(".image a img");
+
+        for(let i=0;i<img.length;i++){
+            img[i].addEventListener
+            ("mouseover",function(){
+                let newImg = "images/glasses/info_"+i+".png";
+                console.log(newImg);
+                img[i].setAttribute("src",newImg);
+            });
+            img[i].addEventListener
+            ("mouseout",function(){
+                let newImg = "images/glasses/origin_"+i+".png";
+                console.log(newImg);
+                img[i].setAttribute("src",newImg);
+            });
+        }
+
+
+        let aline = document.querySelectorAll(".container .shop ul li a");
+        // let active = document.querySelectorAll(".container ul li a");
+      
+        for(let i=0;i<aline.length;i++){
+            console.log(i);
+           aline[i].addEventListener("click",() => {
+              for(let j=0;j<aline.length;j++){
+                aline[j].style.borderBottom = "none";
+              }
+              aline[i].style.borderBottom = "2px solid lightgray";
+           })
+        }
+    </script>
+</body>
+</html>

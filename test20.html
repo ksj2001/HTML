@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container a{
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            border: 1px solid lightgray;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            padding: 7px;
+            box-sizing: border-box;
+        }
+        .container a:hover{
+            background-color: black;
+            color: white;
+        }
+        .box{
+            width: 600px;
+            height: 200px;
+            border: 1px solid blue;
+        }
+        .box div{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid red;
+            display: inline-block;
+        }
+        /* nth-child는 태그를 체크하지 않는다 ~ 순서만을 체크할 뿐이다. */
+        /* nth-of-type은 태그를 체크해서 같은 태그가 아닌 것은 속성을 주지 않는다. */
+        .box div:first-child{
+            background-color: blue;
+        }
+        .box div:nth-of-type(2){
+            background-color: yellow;
+        }
+        .box div:nth-of-type(3){
+            background-color: green;
+        }
+        .box div:last-child{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://www.naver.com">네이버</a>
+        <a href="https://www.google.com">구글</a>
+        <a href="https://www.daum.net">다음</a>
+    </div>
+    <div class="box">
+        <!-- <h2>박스 테스트</h2> -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

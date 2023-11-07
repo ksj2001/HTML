@@ -1,0 +1,11 @@
+.box > div div > div{
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    background-color: dodgerblue; 
+}
+.box > div > div{
+    border: 1px solid green;
+    width: 200px;
+    height: 200px;
+}

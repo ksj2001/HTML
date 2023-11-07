@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>kmong</title>
+    <script src="https://kit.fontawesome.com/82fd850f0d.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: black;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .section{
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            text-align: center;
+            width: 300px;
+            height: 400px;
+            border: 1px solid black;
+        }
+        .item{
+            margin-bottom: 5px;
+            /* font-size: 13px; */
+        }
+        .title{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        input{
+            width: 270px;
+            height: 35px;
+            padding: 10px;
+            border: 1px solid lightgray;
+            border-radius: 3px;
+        }
+        button{
+            width: 270px;
+            height: 35px;
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        #login{
+            border: 1px solid white;
+            background-color: rgb(255,212,0);
+        }
+        #signup{
+            border: 1px solid gray;
+            background-color: white;
+        }
+        #log{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: gray;
+            font-size: 12px;
+            /* border: 1px solid red; */
+            padding: 0 15px;
+        }
+        #log > a{
+            color: gray;
+        }
+        #log label::before{
+            content: '\f00c';
+            font-family: "fontawesome";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            font-size: 10px;
+            border: 1px solid lightgray;
+            line-height: 12px;
+            text-align: center;
+            vertical-align: middle;
+            color: transparent;
+            margin-right: 5px;
+        }
+        #log input[type=checkbox]:checked + label::before{
+            background-color: rgb(255,212,0);
+            color: white;
+            border-color: transparent;
+        }
+
+        input[type=checkbox]{
+            /* zoom: 0.35;
+            margin: 0px; */
+            display: none;
+        } 
+        #snslogin{
+            width: 270px;
+            height: 90px;
+            border: 1px solid lightgray;
+            border-radius: 3px;
+            margin: 0 auto;
+        }
+        #snstext{
+            text-align: left;
+            font-weight: bold;
+            margin-top: 0;
+            margin-left: 20px;
+        }
+        .sns a{
+            border: 1px solid white;
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: white;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+            color: white;
+        }
+        .sns a:nth-child(1){
+            background-color: #00C300;
+        }
+        .sns a:nth-child(2){
+            background-color: #FFFC00;
+            color: rgb(81, 20, 20);
+        }
+        .sns a:nth-child(3){
+            background-color: #1877F2;
+        }
+        .sns a:nth-child(4){
+            background-color: #FF5700;
+        }
+        .sns a:nth-child(5){
+            background-color: black;
+        }
+        span{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="title">
+            <p>kmong</p>
+        </div>
+        <form class="info">
+            <div class="item">
+                <input type="email" placeholder="이메일을 입력해 주세요.">
+            </div>
+            <div class="item">
+                <input type="password" placeholder="비밀번호를 입력해 주세요.">
+            </div>
+            <div class="item">
+                <button id="login" type="submit">로그인
+            </div>
+            <div class="item" id="log">
+                <input type="checkbox" id="chk"><label for="chk">로그인 상태 유지</label>
+                <a href="#">아이디·비밀번호 찾기</a>
+            </div>
+            <div class="item" id="snslogin">
+                <p id="snstext">SNS 간편 로그인</p>
+                <div class="sns">
+                    <a href="#"><i class="fa-solid fa-n"></i></a>
+                    <a href="#"><i class="fa-solid fa-comment"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fa-brands fa-apple"></i></a>
+                </div>
+            </div>
+            <div class="item">
+                <button id = "signup" type="submit">회원가입</button>
+                <p>회원가입 하면 <span>10만원 쿠폰팩</span>을 드려요!</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

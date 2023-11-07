@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시외버스 예매</title>
+    <link rel="stylesheet" href="res_1.css">
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://kit.fontawesome.com/82fd850f0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="menu_wrap">
+                <ul>
+                    <li class="home"><i class="fa-solid fa-house"></i></li>
+                    <!-- 띄어쓰기 22번 -->
+                    <li><p>&nbsp;&nbsp;&nbsp;시외버스 예매&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∨</p>
+                        <ul>
+                            <li><a href="#"><span>></span>&nbsp;시외버스 예매</a></li>
+                            <li><a href="#"><span>></span>&nbsp;운행정보</a></li>
+                            <li><a href="#"><span>></span>&nbsp;이용안내</a></li>
+                            <li><a href="#"><span>></span>&nbsp;고객지원</a></li>
+                        </ul>
+                    </li>
+                    <li><p>&nbsp;&nbsp;&nbsp;승차권 예매&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∨</p>
+                        <ul>
+                            <li><a href="#"><span>></span>&nbsp;승차권 예매</a></li>
+                            <li><a href="#"><span>></span>&nbsp;예매조회/취소/변경</a></li>
+                            <li><a href="#"><span>></span>&nbsp;영수증 발행</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_wrap">
+                <h2>승차권 예매</h2>
+                <div class="cont">
+                    <div class="cont_left">
+                        <h3>기초정보 입력</h3>
+                        <p>시외버스 예매 시스템으로 안전하고 편리하게 여행하세요.</p>
+                    </div>
+                    <div class="cont_right">
+                        <div class="tab">
+                            <ul>
+                                <li><a href="#">1<span>기초정보 입력</span></a></li>
+                                <li><a href="#">2<span>배차 조회</span></a></li>
+                                <li><a href="#">3<span>매수 및 좌석 선택</span></a></li>
+                                <li><a href="#">4<span>카드정보 입력</span></a></li>
+                                <li><a href="#">5<span>예매 결과</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="main">
+                            <div class="main_left">
+                                <div class="logo">
+                                    <i class="fa-solid fa-bus"></i>
+                                </div>
+                                <h3>승차권 예매</h3>
+                                <p>
+                                    시외버스 예매 시스템으로<br>
+                                    안전하고 편리하게 여행하세요.
+                                </p>
+                            </div>
+                            <div class="main_right">
+                                <p class="oneway_roundtrip">
+                                    <input type="radio" name="oneway_roundtrip" id="one_way" onclick="oneway_roundtrip_radio_checked()">
+                                    <label for="one_way">편도</label>
+                                    <input type="radio" 
+                                    name="oneway_roundtrip"
+                                    id="round_trip" onclick="oneway_roundtrip_radio_checked()">
+                                    <label for="round_trip">왕복</label>
+                                </p>
+                                <div class="line1">
+                                    <label for="sp" class="three"><span>></span>출발지</label>
+                                    <input type="text" id="start" placeholder="출발지 선택">
+                                </div>
+                                <div class="line2">
+                                    <label for="dest" class="three"><span>></span>도착지</label>
+                                    <input type="text" id="dest" placeholder="도착지 선택">
+                                </div>
+                                <div class="line3">
+                                    <label for="sd_1" class="four"><span>></span>가는일시</label>
+                                    <input type="date" id="sd_1" class="date" value="2023-09-25" min="2023-09-25">
+                                    <select id="st_1" class="time">
+                                        <option value="00:00">00:00</option>
+                                        <option value="01:00">01:00</option>
+                                        <option value="02:00">02:00</option>
+                                        <option value="03:00">03:00</option>
+                                        <option value="04:00">04:00</option>
+                                        <option value="05:00">05:00</option>
+                                        <option value="06:00">06:00</option>
+                                        <option value="07:00">07:00</option>
+                                        <option value="08:00">08:00</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="22:00">22:00</option>
+                                        <option value="23:00">23:00</option>
+                                        <option value="24:00">24:00</option>
+                                    </select>
+                                </div>
+                                <div class="line4">
+                                    <label for="sd_2" class="four"><span>></span>오는일시</label>
+                                    <input type="date" id="sd_2" class="date" value="2023-09-25" min="2023-09-25" disabled>
+                                    <select id="st_2" class="time" disabled>
+                                        <option value="00:00" selected>00:00</option>
+                                        <option value="01:00">01:00</option>
+                                        <option value="02:00">02:00</option>
+                                        <option value="03:00">03:00</option>
+                                        <option value="04:00">04:00</option>
+                                        <option value="05:00">05:00</option>
+                                        <option value="06:00">06:00</option>
+                                        <option value="07:00">07:00</option>
+                                        <option value="08:00">08:00</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="22:00">22:00</option>
+                                        <option value="23:00">23:00</option>
+                                        <option value="24:00">24:00</option>
+                                    </select>
+                                </div>
+                                <div class="line5">
+                                    <label for="adult" class="two"><span>></span>어른</label>
+                                    <select id="adult">
+                                        <option value="0">0</option>
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <div class="line6">
+                                    <label for="teen" class="three"><span>></span>중고생</label>
+                                    <select id="teen">
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <div class="line7">
+                                    <label for="child" class="two"><span>></span>아동</label>
+                                    <select>
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <p class="view">
+                                    <button type="button">조회</button>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <ol>
+                                <li>당일 출발하는 차량은 출발시간 10분 전까지 예매가 가능합니다.</li>
+                                <li>1회 최대 예매 매수는 10매입니다. 10매 이상 예매를 원하시는 경우에는 중복예매 가능합니다.</li>
+                                <li>예매한 승차권 발권 시에는 반드시 예약한 카드를 지참해야 하여, 해당 터미널 매표 창구에 예약된 사항이 있다고 말씀하시고, 카드를 제시하시면 승차권을 발권받으실 수 있습니다. 단, 부득이하게 예약한 카드를 소지하지 못한 경우, 예약한 카드 번호를 매표 창구에 제시하시면 승차권을 발급받을 수 있습니다. (발권 방법의 차이가 있는 터미널이 존재하며, 해당 터미널에 문의하시면 정확한 발권 방법의 확인이 가능합니다.)</li>
+                                <li>
+                                    <span>공항버스 한정면허(서울시) 취소수수료
+                                    <br>
+                                    * 승차권 발권 전 취소 또는 승차권 발권 후 환불</span>
+                                    <p>(취소 수수료는 100원 미만은 절사)</p>
+                                    <div class="table" id="table1">
+                                        <table border="1">
+                                            <tr>
+                                                <td>구분</td>
+                                                <td>취소 시기</td>
+                                                <td>수수료</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="6">
+                                                    취소<br>
+                                                    수수료
+                                                </td>
+                                                <td>
+                                                    <ul>
+                                                        <li>
+                                                            차량 출발일 2일(48시간) 전까지 취소 시
+                                                        </li>
+                                                        <li>
+                                                            (당일 포함) 구매(예매)시점 기준 1시간 이내이면서 출발 1시간 이전까지 취소 시
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    수수료 없음
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    차량 출발일 2일(48시간) 이내이며 구매시점 기준 1시간 경과 후 차량 출발 1시간 이전까지 취소 시
+                                                </td>
+                                                <td>
+                                                    승차권 요금의 10%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    차량 출발 1시간 이내부터 차량 출발 15분 이전까지 취소 시
+                                                </td>
+                                                <td>
+                                                    승차권 요금의 20%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    차량 출발 15분 이내부터 차량 출발 전까지 취소 시
+                                                </td>
+                                                <td>
+                                                    승차권 요금의 30%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    차량 출발 후 3시간 이전 취소 시
+                                                </td>
+                                                <td>
+                                                    승차권 요금의 50%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    차량 출발 후 3시간 이후 (취소 불가)
+                                                    <br>
+                                                    차량 출발 후 3시간 이후에는 예매한 승차권을 자동취소(부도처리)
+                                                </td>
+                                                <td>
+                                                    승차권 요금의 100%
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    ※ 대상 운수사 : 공항리무진, 서울공항리무진, KAL리무진, 한국도심공항 (4개사)
+                                    <br>
+                                    ※ 구매시점이란 승객이 승차권을 결제한 시점을 의미합니다.
+                                </li>
+                                <li>
+                                    <span>시외버스 취소수수료 안내</span>
+                                    <p>(취소 수수료는 100원 미만은 절사)</p>
+                                    <div class="table" id="table2">
+                                        <table border="1">
+                                            <tr>
+                                                <td>구분</td>
+                                                <td>취소 시기</td>
+                                                <td>수수료</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="5">
+                                                    승차권
+                                                    <br>
+                                                    (모바일승차권 포함)
+                                                    <br>
+                                                    발권 후
+                                                    <br>
+                                                    <br>
+                                                    예매 후
+                                                </td>
+                                                <td>
+                                                    지정차 출발 2일 전까지
+                                                    <br>
+                                                    승차권 발권 시점(예매 후 발권은 제외) 기준 1시간 이내 또는 예매시점 기준 1시간 이내
+                                                    <br>
+                                                    단, 지정차 출발 전에 한함
+                                                </td>
+                                                <td>
+                                                    없음
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    지정차 출발 1일전 ~ 1시간 이전까지
+                                                </td>
+                                                <td>
+                                                    5%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    지정차 출발 1시간 이내 ~ 출발 직전까지
+                                                </td>
+                                                <td>
+                                                    10%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    지정차 출발 후 6시간 이전까지
+                                                </td>
+                                                <td>
+                                                    30%
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    지정차 출발 후 6시간 이후
+                                                    <br>
+                                                    * 예매 및 모바일 승차권의 경우는 출발 6시간 이후 자동취소(부도처리)
+                                                </td>
+                                                <td>
+                                                    100%
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li>시외버스 승차권의 예약기간은 특별히 정해져 있는 것은 아니고, 해당 노선의 배차정보가 입력된 일자까지 가능합니다.</li>
+                                <li>본 홈페이지를 통한 시외버스 승차권 예약은 실시간 온라인 처리가 되므로 승차권 예약시 회선장애나 기타 통신장애로 인해 예약성공여부를 확인하지 못한 경우에는 반드시 예약조회 메뉴를 통해 예약성공여부를 확인하셔야 합니다.</li>
+                                <li>출발시간이 지난 후에는 승차권을 발권받을 수 없습니다. 출발 당일 터미널 혼잡에 대비하여 출발시간보다 여유있게 터미널에 도착하셔서 발권받으시기 바랍니다.</li>
+                                <li>승차권 왕복 예매 시 신용카드 승인은 2건으로 나뉘어 이루어지며, 승차권 발권은 해당 승차권 출발지 터미널에서만 가능합니다.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let menu_li = document.querySelectorAll(".menu_wrap ul li ul > li");
+        let menu_li_a = document.querySelectorAll(".menu_wrap ul li ul > li > a");
+        let menu_li_span = document.querySelectorAll(".menu_wrap ul li ul > li > a > span");
+
+        for(let i=0;i<menu_li.length;i++){
+            menu_li[i].addEventListener("mouseover",() => {
+                for(let j=0;j<menu_li.length;j++){
+                    menu_li[j].style.backgroundColor = "#fff";
+                    menu_li_a[j].style.color = "#666";
+                    menu_li_span[j].style.color = "red";
+                }
+                menu_li[i].style.backgroundColor = "#f58220";
+                menu_li_a[i].style.color = "#fff";
+                menu_li_span[i].style.color = "#fff";
+            })
+        }
+
+        let roundtrip_radio = document.querySelector(".main_right > .oneway_roundtrip > #round_trip");
+        let line4_input = document.querySelector(".main_right > .line4 > #sd_2");
+        let line4_select = document.querySelector(".main_right > .line4 > #st_2");
+
+        function oneway_roundtrip_radio_checked(){
+            console.log(roundtrip_radio.checked);
+            console.log(line4_input.disabled);
+            if(roundtrip_radio.checked === true){
+            line4_input.disabled = false;
+            line4_input.style.backgroundColor = "#fff";
+            line4_select.disabled = false;
+            line4_select.style.backgroundColor = "#fff";
+            }
+            else{
+            line4_input.disabled = true;
+            line4_input.style.backgroundColor = "#ddd";
+            line4_select.disabled = true;
+            line4_select.style.backgroundColor = "#ddd";
+            }
+        }
+    </script>
+</body>
+</html>

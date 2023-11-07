@@ -1,0 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Noto+Sans+KR&family=Oswald:wght@600&display=swap'); */
+
+
+/* font-family: 'Hind Siliguri', sans-serif;
+font-family: 'Noto Sans KR', sans-serif; */

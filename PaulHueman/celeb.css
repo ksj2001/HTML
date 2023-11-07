@@ -1,0 +1,76 @@
+h1,h2,h3,h4,h5,h6{
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    
+}
+.container{
+    width: 1170px;
+    height: 1700px;
+    display: flex;
+    /* border: 1px solid red; */
+    margin-top: 178px;
+}
+.container .campaign{
+    width: 170px;
+    height: 133px;
+    /* border: 1px solid blue; */
+}
+.container .campaign h2{
+    font-size: 12px;
+    font-weight: bold;
+}
+.container ul{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.container ul li a{
+    font-size: 12px;
+    line-height: 2em;
+}
+.container ul .active{
+    /* text-decoration: underline; */
+    height: 22px;
+    width: 75px;
+    /* border: 1px solid crimson; */
+    border-bottom: 2px solid rgb(150, 150, 150);
+}
+
+.container .celeb{
+    width: 1000px;
+    height: 1700px;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container .celeb .items{
+    width: 333px;
+    height: 420px;
+    /* border: 1px solid dodgerblue; */
+    margin: 15px 0;
+    /* padding: 20px; */
+    /* margin: 5px; */
+}
+.container .celeb .items .image{
+    width: 313px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+.container .celeb .items img{
+    width: 313px;
+    height: 285px;
+}
+.container .celeb .details{
+    width: 313px;
+    height: 25px;
+    text-align: center;
+}
+.container .celeb .details p{
+    font-size: 14px;
+}

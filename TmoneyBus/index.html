@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>티머니 시외버스예매 리뉴얼</title>
+    <link rel="stylesheet" href="Tmoneybus.css">
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://kit.fontawesome.com/82fd850f0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="header_bg"></span>
+            <div class="header_top">
+                <div class="header_top_wrap">
+                    <ul class="navi_depth1">
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li>
+                            <ul class="navi_depth2">
+                                <li><span>Language</span>
+                                    <ul class="navi_depth3">
+                                        <li><a href="#">한국어</a></li>
+                                        <li><a href="#">English</a></li>
+                                        <li><a href="#">中國語</a></li>
+                                        <li><a href="#">日本語</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_mid">
+                <div class="header_mid_wrap">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt=""></a>
+                    </div>
+                    <div class="navi">
+                        <ul class="depth1">
+                            <li><a href="#">시외버스 예매</a>
+                                <ul class="depth2">
+                                    <li><a href="#">승차권 예매</a></li>
+                                    <li><a href="#">예매조회/취소/변경</a></li>
+                                    <li><a href="#">영수증 발행</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">운행정보</a>
+                                <ul class="depth2">
+                                    <li><a href="#">노선/운행정보</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">이용안내</a>
+                                <ul class="depth2">
+                                    <li><a href="#">승차권 예매 안내</a></li>
+                                    <li><a href="#">예매 변경 및 취소 안내</a></li>
+                                    <li><a href="#">모바일 이용안내</a></li>
+                                    <li><a href="#">터미널 및 운수사 안내</a></li>
+                                    <li><a href="#">현금영수증 안내</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">고객지원</a>
+                                <ul class="depth2">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">고객의 소리</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bot">
+                <div class="header_bot_wrap">
+                    <p>
+                        한차원 높은 시외버스 통합예매시스템으로<br>
+                        <span>안전하고 편리하게!</span>
+                    </p>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="main_top">
+                <div class="main_top_wrap">
+                    <div class="main_top_left">
+                        <img src="images/main_0.png" alt="">
+                        <p>
+                            <span>승차권 예매·조회</span><br>
+                            시외버스 예매시스템으로<br>
+                            안전하고 편리하게 여행하세요.
+                        </p>
+                    </div>
+                    <div class="main_top_right">
+                        <ul>
+                            <li><a href="#">편도 승차권 예매</a></li>
+                            <li><a href="#">왕복 승차권 예매</a></li>
+                            <li><a href="#">예매조회/취소/변경</a></li>
+                        </ul>
+                        <div class="content_wrap">
+                            <div class="content1">
+                                <div class="line1">
+                                    <label for="sp" class="three"><span>></span>출발지</label>
+                                    <input type="text" id="start" placeholder="출발지 선택">
+                                    <label for="dest" class="three"><span>></span>도착지</label>
+                                    <input type="text" id="dest" placeholder="도착지 선택">
+                                </div>
+                                <div class="line2">
+                                    <label for="sd_1" class="three"><span>></span>가는일</label>
+                                    <input type="date" id="sd_1" value="2023-09-15" min="2023-09-15">
+                                    <label for="st_1" class="four"><span>></span>가는시간</label>
+                                    <select id="st_1">
+                                        <option value="00:00">00:00</option>
+                                        <option value="01:00">01:00</option>
+                                        <option value="02:00">02:00</option>
+                                        <option value="03:00">03:00</option>
+                                        <option value="04:00">04:00</option>
+                                        <option value="05:00">05:00</option>
+                                        <option value="06:00">06:00</option>
+                                        <option value="07:00">07:00</option>
+                                        <option value="08:00">08:00</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="22:00">22:00</option>
+                                        <option value="23:00">23:00</option>
+                                        <option value="24:00">24:00</option>
+                                    </select>
+                                </div>
+                                <div class="line3">
+                                    <label for="sd_2" class="three"><span>></span>오는일</label>
+                                    <input type="date" id="sd_2" value="2023-09-15" min="2023-09-15" disabled>
+                                    <label for="st_2" class="four"><span>></span>오는시간</label>
+                                    <select id="st_2" disabled>
+                                        <!-- <option value="00:00" selected>00:00</option>
+                                        <option value="01:00">01:00</option>
+                                        <option value="02:00">02:00</option>
+                                        <option value="03:00">03:00</option>
+                                        <option value="04:00">04:00</option>
+                                        <option value="05:00">05:00</option>
+                                        <option value="06:00">06:00</option>
+                                        <option value="07:00">07:00</option>
+                                        <option value="08:00">08:00</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="22:00">22:00</option>
+                                        <option value="23:00">23:00</option>
+                                        <option value="24:00">24:00</option> -->
+                                    </select>
+                                </div>
+                                <div class="line4">
+                                    <label for="adult" class="two"><span>></span>어른</label>
+                                    <select id="adult">
+                                        <option value="0">0</option>
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                    <label for="teen" class="three"><span>></span>중고생</label>
+                                    <select id="teen">
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select><label for="child" class="two"><span>></span>아동</label>
+                                    <select>
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <p class="view">
+                                    <button type="button">조회</button>
+                                </p>
+                            </div>
+                            <div class="content2">
+                                <div class="line1">
+                                    <label for="sp" class="three"><span>></span>출발지</label>
+                                    <input type="text" id="start" placeholder="출발지 선택">
+                                    <label for="dest" class="three"><span>></span>도착지</label>
+                                    <input type="text" id="dest" placeholder="도착지 선택">
+                                </div>
+                                <div class="line2">
+                                    <label for="sd_1" class="three"><span>></span>가는일</label>
+                                    <input type="date" id="sd_1" value="2023-09-15" min="2023-09-15">
+                                    <label for="st_1" class="four"><span>></span>가는시간</label>
+                                    <select id="st_1">
+                                        <option value="00:00">00:00</option>
+                                        <option value="01:00">01:00</option>
+                                        <option value="02:00">02:00</option>
+                                        <option value="03:00">03:00</option>
+                                        <option value="04:00">04:00</option>
+                                        <option value="05:00">05:00</option>
+                                        <option value="06:00">06:00</option>
+                                        <option value="07:00">07:00</option>
+                                        <option value="08:00">08:00</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="22:00">22:00</option>
+                                        <option value="23:00">23:00</option>
+                                        <option value="24:00">24:00</option>
+                                    </select>
+                                </div>
+                                <div class="line3">
+                                    <label for="sd_2" class="three"><span>></span>오는일</label>
+                                    <input type="date" id="sd_2" value="2023-09-15" min="2023-09-15">
+                                    <label for="st_2" class="four"><span>></span>오는시간</label>
+                                    <select id="st_2">
+                                        <option value="00:00" selected>00:00</option>
+                                        <option value="01:00">01:00</option>
+                                        <option value="02:00">02:00</option>
+                                        <option value="03:00">03:00</option>
+                                        <option value="04:00">04:00</option>
+                                        <option value="05:00">05:00</option>
+                                        <option value="06:00">06:00</option>
+                                        <option value="07:00">07:00</option>
+                                        <option value="08:00">08:00</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="22:00">22:00</option>
+                                        <option value="23:00">23:00</option>
+                                        <option value="24:00">24:00</option>
+                                    </select>
+                                </div>
+                                <div class="line4">
+                                    <label for="adult" class="two"><span>></span>어른</label>
+                                    <select id="adult">
+                                        <option value="0">0</option>
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                    <label for="teen" class="three"><span>></span>중고생</label>
+                                    <select id="teen">
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select><label for="child" class="two"><span>></span>아동</label>
+                                    <select>
+                                        <option value="0" selected>0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <p class="view">
+                                    <button type="button">조회</button>
+                                </p>    
+                            </div>
+                            <div class="content3">
+                                <div class="line1">
+                                    <div class="method">
+                                        <span>카드번호로<br>조회</span>
+                                    </div>
+                                    <div class="info">
+                                        <label for="birthDate"><span>></span>생년월일</label>
+                                        <input type="text" id="birthDate" placeholder="예)750101" maxlength="6">
+                                        <br>
+                                        <label for="cardNum"><span>></span>카드번호</label>
+                                        <br>
+                                        <input type="text" class="cardPhoneNum" id="" maxlength="4"> -
+                                        <input type="password"
+                                        class="cardPhoneNum" id="" maxlength="4"> -
+                                        <input type="password"
+                                        class="cardPhoneNum" id="" maxlength="4"> -
+                                        <input type="text"
+                                        class="cardPhoneNum" id=""
+                                        maxlength="4">
+                                    </div>
+                                    <div class="submit">
+                                        <button type="button">조회</button>
+                                    </div>
+                                </div>
+                                <div class="line2">
+                                    <div class="method">
+                                        <span>휴대폰번호<br>조회</span>
+                                    </div>
+                                    <div class="info">
+                                        <label for="birthDate"><span>></span>생년월일</label>
+                                        <input type="text" id="birthDate" placeholder="예)750101" maxlength="6">
+                                        <br>
+                                        <label for="phoneNum" class="phoneNum"><span>></span>휴대폰</label>
+                                        <select id="phoneNum">
+                                            <option value="010" selected>010</option>
+                                            <option value="011">011</option>
+                                            <option value="016">016</option>
+                                            <option value="017">017</option>
+                                            <option value="018">018</option>
+                                            <option value="019">019</option>
+                                        </select> -
+                                        <input type="text" id=""
+                                        class="cardPhoneNum" maxlength="4"> -
+                                        <input type="text" id=""
+                                        class="cardPhoneNum"
+                                        maxlength="4">
+                                    </div>
+                                    <div class="submit">
+                                        <button type="button">조회</button>
+                                    </div>
+                                </div>
+                                <div class="line3">
+                                    <div class="method">
+                                        <span>예매번호<br> 조회</span>
+                                    </div>
+                                    <div class="info">
+                                        <label for="birthDate"><span>></span>생년월일</label>
+                                        <input type="text" id="birthDate" placeholder="예)750101" maxlength="6">
+                                        <br>
+                                        <label for="reserveNum"><span>></span>예매번호</label>
+                                        <input type="text" maxlength="17">
+                                    </div>
+                                    <div class="submit">
+                                        <button type="button">조회</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_mid">
+                <div class="main_mid_leftimg">
+                    <img src="images/bg_overleft.gif" alt="">
+                </div>
+                <div class="main_mid_wrap">
+                    <div class="main_mid_1">
+                        <a href="#">
+                            <img src="images/main_1.png" alt="">
+                            <p>현금영수증 안내</p>
+                        </a>
+                    </div>
+                    <div class="main_mid_2">
+                        <a href="#">
+                            <img src="images/main_2.png" alt="">
+                            <p>모바일 서비스</p>
+                        </a>
+                    </div>
+                    <div class="main_mid_3">
+                        <a href="#">
+                            <img src="images/main_3.png" alt="">
+                            <p>운수사 안내</p>
+                        </a>
+                    </div>
+                    <div class="main_mid_4">
+                        <a href="#">
+                            <img src="images/main_4.png" alt="">
+                            <p>터미널 안내</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="main_mid_rightimg">
+                    <img src="images/bg_overright.gif" alt="">
+                </div>
+            </div>
+            <div class="main_bot">
+                <div class="main_bot_wrap">
+                    <div class="main_bot_left">
+                        <div class="main_bot_notice">
+                            <h3>공지사항</h3>
+                            <a href="#">더보기&nbsp;<span>+</span></a>
+                        </div>
+                        <div class="main_bot_notice_list">
+                            <ul>
+                                <li>
+                                    <a href="#" class="notice1">
+                                        <p class="title">
+                                            <개인정보 처리방침 약관 개정 안내>
+                                        </p>
+                                        <p class="date">
+                                            2023-02-15
+                                        </p>
+                                        <p class="details">
+                                            안녕하세요. 시외버스 개인정보 처리방침 관련하여 개인정보의 제3자 제공 항목이 변경되어 개정사항 사..
+                                        </p>
+                                        <span class="view">자세히보기 +</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="notice2">
+                                        <p class="title">
+                                            시외우등버스 할인제도 폐지 안내
+                                        </p>
+                                        <p class="date">
+                                            2021-02-04
+                                        </p>
+                                        <p class="details">
+                                            2021년 2월 15일(월)부터 출발하는 시외우등버스 할인제도가 폐지되오니
+                                            이 점 확인하시어 버..
+                                        </p>
+                                        <span class="view">자세히보기 +</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="notice3">
+                                        <p class="title">
+                                            예매/출발지 외 경유터미널(정류소) 탑승불가 안내
+                                        </p>
+                                        <p class="date">
+                                            2017-11-15
+                                        </p>
+                                        <p class="details">
+                                            시외버스 홈페이지에서 예매하신 시외버스 차량탑승시 반드시 예매시 지정한 출발지 터미널에서 탑승해주시..
+                                        </p>
+                                        <span class="view">자세히보기 +</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main_bot_family">
+                            <ul>
+                                <li><a href="https://www.molit.go.kr/portal.do"><img src="images/family_1.png" alt=""></a></li>
+                                <li><a href="https://www.tago.go.kr/"><img src="images/family_2.png" alt=""></a></li>
+                                <li><a href="https://www.kobus.co.kr/main.do"><img src="images/family_3.png" alt=""></a></li>
+                                <li><a href="https://www.hticket.co.kr/main.do"><img src="images/family_4.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main_bot_custom">
+                        <a href="#">
+                            <img src="images/main_5.png" alt="">
+                            <h3>고객의 소리</h3>
+                            <p>
+                                고객 여러분의 소중한 소리에<br>
+                                귀기울이겠습니다.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer_top">
+                <div class="footer_top_wrap">
+                    <ul class="navi_depth1">
+                        <li><a href="#">시외버스 예매</a>
+                            <ul class="navi_depth2">
+                                <li><a href="#">승차권 예매</a></li>
+                                <li><a href="#">예매조회/취소/변경</a></li>
+                                <li><a href="#">영수증 발행</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">운행정보</a>
+                            <ul class="navi_depth2">
+                                <li><a href="#">노선/운행정보</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용안내</a>
+                            <ul class="navi_depth2">
+                                <li><a href="#">승차권 예매 안내</a></li>
+                                <li><a href="#">예매 변경 및 취소 안내</a></li>
+                                <li><a href="#">모바일 이용안내</a></li>
+                                <li><a href="#">터미널 및 운수사 안내</a></li>
+                                <li><a href="#">현금영수증 안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">고객지원</a>
+                            <ul class="navi_depth2">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">고객의 소리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_bot">
+                <div class="footer_bot_wrap">
+                    <div class="info">
+                        <p class="site">
+                            <a href="#">이용약관 <span> | </span> </a>
+                            <a href="#" class="highlight">개인정보처리방침 <span>|</span></a>
+                            <a href="#">이메일무단수집거부 <span>|</span></a>
+                            <a href="#"> 사이트맵 <span>|</span> </a>
+                            <a href="#">티머니</a>
+                        </p>
+                        <p class="address">
+                            서울특별시 중구 후암로 110 서울시티타워 10층 <span>|</span> 사업자등록번호 104-81-83559
+                        </p>
+                        <p class="copyright">
+                            Copyright 2019 Tmoney Co., Ltd. All rights reserved.
+                        </p>
+                        <p class="etc">
+                            고객센터 대표전화 1644-3070 | 근무시간 평일 09:00~18:00 / 토,일, 법정공휴일 휴무
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let top_right_list = document.querySelectorAll(".main_top_right ul li a");
+
+        for(let i=0;i<top_right_list.length;i++){
+            top_right_list[i].addEventListener("click",() => {
+                for(let j=0;j<top_right_list.length;j++){
+                    top_right_list[j].style.borderBottom = "1px solid #bebebe";
+                    top_right_list[j].style.color = "#828282";
+                    top_right_list[j].style.backgroundColor = "#e4e4e4";
+                }
+                top_right_list[i].style.borderBottom = "none";
+                top_right_list[i].style.color = "#801786";
+                top_right_list[i].style.backgroundColor = "white";
+            })
+        }
+
+        let content = document.querySelectorAll(".content_wrap > div");
+
+        for(let i=0;i<top_right_list.length;i++){
+            top_right_list[i].addEventListener("click",() => {
+                for(let j=0;j<top_right_list.length;j++){
+                    content[j].style.display = "none";
+                }
+                content[i].style.display = "block";
+            })
+        }
+
+        // let header = document.querySelector("header");
+        let header_bg = document.querySelector("header .header_bg");
+        let header_top = document.querySelector("header .header_top");
+        let header_top_text = document.querySelectorAll("header .header_top .header_top_wrap .navi_depth1 li a");
+        let header_mid = document.querySelector("header .header_mid");
+        let header_mid_depth1 = document.querySelector("header .header_mid .header_mid_wrap .navi .depth1");
+        let header_mid_li1 = document.querySelectorAll("header .header_mid .header_mid_wrap .navi .depth1 > li");
+        // ***** 수정된 부분 *****
+        let header_mid_a1 = document.querySelectorAll("header .header_mid .header_mid_wrap .navi .depth1 > li > a");
+        // **********************
+        let header_mid_depth2 = document.querySelectorAll("header .header_mid .header_mid_wrap .navi .depth1 li .depth2");
+        let header_mid_a2 = document.querySelectorAll("header .header_mid .header_mid_wrap .navi .depth1 li .depth2 li a");
+
+        header_mid_depth1.addEventListener("mouseover",() => {
+            header_bg.style.display = "block";
+            header_top.style.backgroundColor = "#f4f4f4";
+            for (let i = 0; i < header_top_text.length - 4; i++) {
+                header_top_text[i].style.color = "#7f7f7f";
+            }
+            header_mid.style.backgroundColor = "#fff";
+            header_mid.style.borderTop = "1px solid #d3d3d3";
+            header_mid.style.borderBottom = "1px solid #d3d3d3";
+            for(let i = 0; i < header_mid_depth2.length; i++) {
+                header_mid_depth2[i].style.display = "block";
+            }
+            header_mid_li1[0].style.borderLeft = "1px solid #d4d4d4";
+            for(let i = 0; i < header_mid_li1.length; i++) {
+                header_mid_li1[i].style.borderRight = "1px solid #d4d4d4";
+            }
+            for(let i = 0; i < header_mid_a1.length; i++) {
+                header_mid_a1[i].style.color = "#555";
+                header_mid_a1[i].style.fontWeight = "600";
+            }
+            for(let i = 0; i < header_mid_a2.length; i++) {
+                header_mid_a2[i].style.fontWeight = "500";
+            }
+        })
+
+        for(let i=0;i<header_mid_li1.length;i++){
+            header_mid_li1[i].addEventListener("mouseover", () => {
+                for(let j=0;j<header_mid_li1.length;j++){
+                    header_mid_li1[j].style.backgroundColor = "#fff";
+                    header_mid_li1[j].style.borderTop = "1px solid #d3d3d3";
+                    header_mid_li1[j].style.borderBottom = "1px solid #d3d3d3";
+                }
+                for(let j=0;j<header_mid_depth2.length;j++){
+                    header_mid_depth2[j].style.backgroundColor = "#fff";
+                }
+                // ***** 수정된 부분 *****
+                for(let j = 0; j < header_mid_a1.length; j++) {
+                header_mid_a1[j].style.textIndent = "0px";
+                header_mid_a1[j].style.background = 
+                "transparent";
+                }
+                header_mid_a1[i].style.textIndent = "-9999px";
+                header_mid_a1[i].style.backgroundImage = `url(images/menu${i+1}.png)`;
+                header_mid_a1[i].style.backgroundPosition = "center";
+                header_mid_a1[i].style.
+                backgroundRepeat = "no-repeat";
+
+                for(let j=0;j<header_mid_a2.length;j++){
+                    header_mid_a2[j].style.color = "#555";
+                }
+                if(i===0){
+                    for(let j=0;j<3;j++){
+                        header_mid_a2[j].style.color = "#fff";
+                    }
+                }
+                else if(i===1){
+                    header_mid_a2[3].style.color = "#fff";
+                }
+                else if(i===2){
+                    for(let j=4;j<9;j++){
+                        header_mid_a2[j].style.color = "#fff";
+                    }
+                }
+                else if(i===3){
+                    for(let j=9;j<12;j++){
+                        header_mid_a2[j].style.color = "#fff";
+                    }
+                }
+                // **********************
+                header_mid_li1[i].style.backgroundColor = "#f58220";
+                header_mid_li1[i].style.borderTop = "1px solid #fff";
+                header_mid_li1[i].style.borderBottom = "1px solid #fff";
+                header_mid_depth2[i].style.backgroundColor = "#f58220";
+            })
+        }
+
+        header_bg.addEventListener("mouseout",() => {
+            header_bg.style.display = "none";
+            header_top.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+            for(let i=0;i<header_top_text.length-4;i++){
+                header_top_text[i].style.color = "#fff";
+            }
+            header_mid.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+            header_mid.style.borderTop = "1px solid gray";
+            header_mid.style.borderBottom = "1px solid gray";
+            header_mid_li1[0].style.borderLeft = "none";
+            for(let i = 0; i < header_mid_depth2.length; i++) {
+                header_mid_depth2[i].style.display = "none";
+            }
+            for(let i = 0; i < header_mid_li1.length; i++) {
+                header_mid_li1[i].style.borderRight = "none";
+                header_mid_li1[i].style.backgroundColor = "transparent";
+                header_mid_li1[i].style.borderTop = "1px solid gray";
+                header_mid_li1[i].style.borderBottom = "1px solid gray";
+            }
+            for(let i = 0; i < header_mid_a1.length; i++) {
+                // ***** 수정된 부분 *****
+                header_mid_a1[i].style.textIndent = "0px";
+                header_mid_a1[i].style.background = "transparent";
+                // **********************
+                header_mid_a1[i].style.color = "#fff";
+                header_mid_a1[i].style.fontWeight = "500";
+            }
+            for(let i = 0; i < header_mid_depth2.length; i++) {
+                header_mid_depth2[i].style.backgroundColor = "transparent";
+            }
+        })
+
+        // function changeheaderbg(){
+        //     let container = documnet.querySelector(".container");
+        //     let header_bot = document.querySelector("header .header_bot");
+
+        //     container.style.backgroundImage = "url(images/sub_bg.jpg)";
+        //     header_bot.style.display = "none";
+        // }
+    </script>
+</body>
+</html>

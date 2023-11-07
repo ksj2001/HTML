@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>폰트어썸을 활용한 Input</title>
+    <script src="https://kit.fontawesome.com/82fd850f0d.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .item{
+            position: relative;
+            /* border: 1px solid red; */
+            width: 300px;
+        }
+        .item input{
+            border: 1px solid gray;
+            width: inherit;
+            height: 50px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            padding-left: 55px;
+            outline: none;
+            transition: 0.3s;
+        }
+        .item .fa{
+            /* 폰트어썸은 inline 속성이다. */
+            /* border: 1px solid red; */
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 50px;
+            top: 0;
+            left: 0;
+            font-size: 24px;
+            /* inline 속성을 가진 태그들을 정가운데에 배치하는 방식 */
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            background-color: gray;
+            border-radius: 5px 0 0 5px;
+            /* display: none; */
+        }
+        /* input 태그에만 사용할 수 있는 focus 가상 클래스 이용 */
+        .item input:focus{
+            border: 1px solid dodgerblue;
+            box-shadow: 0 0 5px dodgerblue;
+        }
+        /* 인접 선택자 +사용
+        단, 인접 선택자 +는 아래에 인접한 속성만 사용할 수 있다. */
+        .item input:focus + .fa{
+            background-color: dodgerblue;
+        }
+        .item input:focus::placeholder{
+            visibility: hidden;
+        }
+        .item input::placeholder{
+            color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="info">
+        <div class="item">
+            <input type="text" placeholder="Your Name">
+            <i class="fa fa-user"></i>
+        </div>
+        <div class="item">
+            <input type="email" placeholder="Email">
+            <i class="fa fa-envelope"></i>
+        </div>
+        <div class="item">
+            <input type="phonenum" placeholder="Phone Number">
+            <i class="fa fa-phone"></i>
+        </div>
+    </form>
+</body>
+</html>

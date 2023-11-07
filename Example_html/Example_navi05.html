@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body{
+            background-color: royalblue;
+        }
+        a{
+            display: block;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.5em;
+            font-size: 30px;
+        }
+        .gnb{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 50px;
+        }
+      
+        .gnb:hover a{
+            /* gnb에 hover가 되면 a태그의 opacity가 0.3으로 변경된다. */
+            opacity: 0.3;
+        }
+        .gnb a:hover{
+            /* a태그가 hover되면 a태그 자기 자신의 opacity가 1로 적용된다. */
+            opacity: 1;
+        }
+        .gnb a:before{
+            content: "> ";
+            opacity: 0;
+        }
+        .gnb a:hover::before{
+            opacity: 1;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="gnb">
+        <a href="#">New Arrivals</a>
+        <a href="#">Summer collection</a>
+        <a href="#">Winter Collection</a>
+        <a href="#">Special Offers</a>
+        <a href="#">Trends</a>
+    </div>
+</body>
+</html>

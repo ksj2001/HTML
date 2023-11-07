@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>checkbox 커스텀</title>
+    <style>
+        body{
+            line-height: 1.5em;
+            font-weight: bold;
+            color: black;
+        }
+        .custom input[type=checkbox]{
+            display: none;
+        }
+        .custom label em{
+            display: inline-block;
+            /* img 사이즈만큼 사이즈 크기를 지정해줘야 한다. */
+            width: 18px;
+            height: 18px;
+            background-image: url(images/checkbox-01.png);
+            background-repeat: no-repeat;
+            background-position: left center;
+            text-align: center;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        /* 'checkbox를 클릭한다'라는 가상클래스는 checked이다.
+        단, checked는 +인접 선택자와 같이 사용한다.*/
+        .custom input[type=checkbox]:checked + label em{
+            background-position: right center;
+        }
+        .custom label{
+            cursor: pointer;
+        }
+        .custom input[type=checkbox]:checked + label{
+            color: crimson;
+        }
+
+        .agree input[type=radio]{
+            display: none;
+        }
+        .agree label em{
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background-image: url(images/radio-01.png);
+            background-repeat: no-repeat;
+            background-position: left center;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .agree input[type=radio]:checked + label em{
+            background-position: right center;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom">
+        <!-- checkbox나 문자를 선택해도 check가 되도록 label 안에 문자를 입력한다.
+        단, 반드시 input의 id값과 label의 for값이 같아야 한다. -->
+        <input type="checkbox" id="chk"><label for="chk"><em></em>약관을 충분히 이해하였으며 동의합니다.</label>
+    </div>    
+        <br><br>
+    <div class="agree">
+        <input type="radio" id="radiochk1" name="agree"><label for="radiochk1"><em></em>초등학생</label>
+        <input type="radio" id="radiochk2" name="agree"><label for="radiochk2"><em></em>중학생</label>
+        <input type="radio" id="radiochk3" name="agree"><label for="radiochk3"><em></em>고등학생</label>
+        <input type="radio" id="radiochk4" name="agree"><label for="radiochk4"><em></em>대학생</label>
+    </div>
+</body>
+</html>

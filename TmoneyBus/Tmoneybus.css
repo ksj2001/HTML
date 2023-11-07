@@ -1,0 +1,851 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 1634px;
+    background-image: url(images/main_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+/* header 부분 css 시작 */
+header{
+    width: 100%;
+    height: 285px;
+    position: absolute;
+}
+header .header_bg{
+    width: 100%;
+    height: 238px;
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: #fff;
+    z-index: 0;
+}
+/* header_top 부분 css 시작 */
+header .header_top{
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .header_top > .header_top_wrap{
+    width: 1200px;
+    height: 40px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+header .header_top > .header_top_wrap > .navi_depth1{
+    /* width: 180px; */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .header_top > .header_top_wrap > .navi_depth1 > li > a{
+    font-size: 12px;
+    color: white;
+    padding-right: 20px;
+}
+header .header_top > .header_top_wrap > .navi_depth1 > li > .navi_depth2{
+    height: 30px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #c5c5c5;
+    border-radius: 3px;
+    padding: 5px;
+}
+header .header_top > .header_top_wrap > .navi_depth1 > li > .navi_depth2 > li > span{
+    font-size: 12px;
+}
+header .header_top > .header_top_wrap > .navi_depth1 > li > .navi_depth2 > li > .navi_depth3{
+    display: none;
+}
+header .header_top > .header_top_wrap > .navi_depth1 > li:hover > .navi_depth2 > li > .navi_depth3{
+    display: block;
+}
+header .header_top > .header_top_wrap > .navi_depth1 > li > .navi_depth2 > li > .navi_depth3 > li{
+    float: left;
+}
+header .header_top > .header_top_wrap > .navi_depth1 > li > .navi_depth2 > li > .navi_depth3 > li > a{
+    font-size: 12px;
+    padding: 0 10px;
+}
+header .header_top > .header_top_wrap > .navi_depth1 > li:hover > .navi_depth2 > li > span{
+    display: none;
+}
+/* header_mid 부분 css 시작 */
+header .header_mid{
+    width: 100%;
+    height: 85px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+header .header_mid > .header_mid_wrap{
+    width: 1200px;
+    height: 85px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+header .header_mid > .header_mid_wrap > .logo{
+    width: 68px;
+    height: 85px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 20px;
+}
+header .header_mid > .header_mid_wrap > .logo img{
+    width: 68px;
+    height: 63px;
+}
+header .header_mid > .header_mid_wrap > .navi{
+    width: 660px;
+    height: 85px;
+    margin-left: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .header_mid > .header_mid_wrap > .navi > .depth1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .header_mid > .header_mid_wrap > .navi > .depth1 > li{
+    position: relative;
+    text-align: center;
+    width: 165px;
+    height: 85px;
+    border: none;
+}
+header .header_mid > .header_mid_wrap > .navi > .depth1 > li > a{
+    display: block;
+    width: 100%;
+    height: 85px;
+    line-height: 85px;
+    color: white;
+    font-size: 18px;
+}
+header .header_mid > .header_mid_wrap > .navi > .depth1 > li > .depth2{
+    display: none;
+    width: 100%;
+    height: 150px;
+    padding-top: 5px;
+    border-right: 1px solid #d4d4d4;
+    text-align: center;
+}
+header .header_mid > .header_mid_wrap > .navi > .depth1 > li:nth-child(1) > .depth2{    
+    border-left: 1px solid #d4d4d4;
+}
+/* header .header_mid > .header_mid_wrap > .navi > .depth1 > li:hover > .depth2{
+    display: block;
+} */
+header .header_mid > .header_mid_wrap > .navi > .depth1 > li > .depth2 > li{
+    padding: 5px 0;
+}
+header .header_mid > .header_mid_wrap > .navi > .depth1 > li > .depth2 > li > a{
+    font-size: 14px;
+}
+header .header_mid > .header_mid_wrap > .navi > .depth1 > li > .depth2 > li > a:hover{
+    text-decoration: underline;
+}
+/* header_bot 부분 css 시작 */
+header .header_bot{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .header_bot > .header_bot_wrap{
+    width: 1200px;
+    height: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: bottom;
+}
+header .header_bot > .header_bot_wrap > p{
+    color: white;
+    font-size: 28px;
+    line-height: 1.2em;
+}
+header .header_bot > .header_bot_wrap > p > span{
+    font-size: 42px;
+    font-weight: 600;
+}
+/* header 부분 css 끝 */
+
+/* section 부분 css 시작 */
+section{
+    width: 100%;
+    height: 954px;
+    position: absolute;
+    top: 350px;
+    left: 0;
+}
+/* main_top 부분 css 시작 */
+section .main_top{
+    width: 100%;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .main_top > .main_top_wrap{
+    width: 1200px;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_top_wrap > .main_top_left{
+    width: 50%;
+    height: 330px;
+    text-align: center;
+    background-color: rgb(118, 53, 122);
+    border-radius: 10px 10px 0 0;
+}
+.main_top_left > img{
+    margin: 40px 0;
+}
+.main_top_left > p{
+    color: white;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+.main_top_left > p > span{
+    font-size: 36px;
+    font-weight: 500;
+}
+.main_top_wrap > .main_top_right{
+    float: left;
+    width: 50%;
+    height: 330px;
+}
+.main_top_right > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_top_right > ul > li{
+    width: 33.3333%;
+    height: 60px;   
+}
+.main_top_right > ul > li > a{
+    width: 100%;
+    height: 60px;
+    border-left: 1px solid #bebebe;
+    border-right: 1px solid #bebebe;
+    border-bottom: 1px solid #bebebe;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #828282;
+    background-color: #e4e4e4;
+}
+.main_top_right > .content_wrap{
+    width: 100%;
+    height: 270px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.content_wrap > .content1{
+    width: 440px;
+    height: 220px;
+    margin: 30px 0 20px;
+}
+.content1 > div{
+    width: 440px;
+    height: 35px;
+    border-bottom: 1px solid #d4d4d4;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.content1 > div span{
+    font-size: 10px;
+    font-weight: 600;
+    color: red;
+    margin-right: 2px;
+}
+.content1 > div > label{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 25px 10px 3px;
+}
+.content1 > div > input{
+    width: 130px;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid #a4a4a4;
+    border-radius: 5px;
+    color: #555;
+}
+.content1 > div > select{
+    width: 130px;
+    height: 30px;
+    text-indent: 10px;
+    border: 1px solid #a4a4a4;
+    border-radius: 5px;
+    color: #555;
+}
+.content1 > div > input::placeholder{
+    color: #555;
+}
+.content1 > div > .four{ 
+    margin-right: 11px;
+}
+.content1 > div > .two{
+    margin-right: 39px;
+}
+.content1 > .line3 > input{
+    background-color: #ddd;
+    color: transparent;
+}
+.content1 > .line3 > select{
+    background-color: #ddd;
+}
+.content1 > .line4 > select{
+    width: 59px;
+    height: 30px;
+}
+.content1 > p{
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    padding: 10px 5px 0 0; 
+}
+.content1 > p > button{
+    width: 110px;
+    height: 30px;
+    background-color: #444;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+.content_wrap > .content2{
+    display: none;
+    width: 440px;
+    height: 220px;
+    margin: 30px 0 20px;
+}
+.content2 > div{
+    width: 440px;
+    height: 35px;
+    border-bottom: 1px solid #d4d4d4;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.content2 > div span{
+    font-size: 10px;
+    font-weight: 600;
+    color: red;
+    margin-right: 2px;
+}
+.content2 > div > label{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 25px 10px 3px;
+}
+.content2 > div > input{
+    width: 130px;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid #a4a4a4;
+    border-radius: 5px;
+    color: #555;
+}
+.content2 > div > select{
+    width: 130px;
+    height: 30px;
+    text-indent: 10px;
+    border: 1px solid #a4a4a4;
+    border-radius: 5px;
+    color: #555;
+}
+.content2 > div > input::placeholder{
+    color: #555;
+}
+.content2 > div > .four{ 
+    margin-right: 11px;
+}
+.content2 > div > .two{
+    margin-right: 39px;
+}
+.content2 > .line4 > select{
+    width: 59px;
+    height: 30px;
+}
+.content2 > p{
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    padding: 10px 5px 0 0; 
+}
+.content2 > p > button{
+    width: 110px;
+    height: 30px;
+    background-color: #444;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+.content_wrap > .content3{
+    display: none;
+    width: 490px;
+    height: 270px;
+    padding-top: 5px;
+}
+.content3 > div{
+    display: flex;
+    justify-content: center;
+}
+.content3 > .line1{
+    height: 95px;
+    border-bottom: 1px solid #d4d4d4;
+}
+.content3 > .line2{
+    height: 75px;
+    border-bottom: 1px solid #d4d4d4;
+}
+.content3 > .line3{
+    height: 75px;
+    /* border: 1px solid yellow; */
+}
+.content3 > div > .method{
+    width: 100px;
+    padding-top: 10px;
+}
+.content3 > div > .info{
+    width: 300px;
+}
+.content3 > div > .submit{
+    width: 90px;
+}
+.content3 > .line1 > .method{
+    height: 95px;
+}
+.content3 > .line1 > .info{
+    height: 95px;
+}
+.content3 > .line1 > .submit{
+    height: 95px;
+}
+.content3 > div > .method > span{
+    font-size: 16px;
+    font-weight: 600;
+}
+.content3 > div > .info span{
+    font-size: 10px;
+    font-weight: 600;
+    color: red;
+    margin-right: 2px;
+}
+.content3 > div > .info label{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 5px 0 10px;
+}
+.content3 > div > .info input{
+    width: 220px;
+    height: 28px;
+    padding-left: 10px;
+    border: 1px solid #a4a4a4;
+    border-radius: 5px;
+    color: #555;
+    margin  : 2px 0 2px;
+}
+.content3 > div > .info .phoneNum{
+    margin-right: 14px;
+}
+.content3 > div > .info select{
+    width: 70px;
+    height: 28px;
+    text-indent: 5px;
+    border: 1px solid #a4a4a4;
+    border-radius: 5px;
+    color: #555;
+}
+.content3 > div > .info .cardPhoneNum{
+    width: 55px;
+}
+.content3 > div > .submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content3 > div > .submit button{
+    width: 75px;
+    height: 29px;
+    background-color: #444;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+/* main_mid 부분 css 시작 */
+section .main_mid{
+    width: 100%;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_mid > .main_mid_leftimg{
+    width: calc(50%-605px);
+    height: 270px;
+    /* position: relative;
+    z-index: 1; */
+}
+.main_mid > .main_mid_rightimg{
+    width: calc(50%-600px);
+    height: 270px;
+    /* position: relative;
+    z-index: -1; */
+}
+.main_mid > .main_mid_wrap{
+    width: 1200px;
+    height: 270px;
+    /* position: absolute;
+    z-index: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_mid_wrap > .main_mid_1{
+    width: 25%;
+    height: 270px;
+    text-align: center;
+    background-color: rgb(229, 131, 48);
+}
+.main_mid_1 > a{
+    width: 100%;
+    height: 270px;
+}
+.main_mid_1 > a > img{
+    padding: 0 99px;
+    padding-top: 50px;
+}
+.main_mid_1 > a > p{
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 49px;
+    padding-bottom: 35px;
+}
+.main_mid_wrap > .main_mid_2{
+    width: 25%;
+    height: 270px;
+    text-align: center;
+    background-color: rgb(177, 91, 18);
+}
+.main_mid_2 > a{
+    width: 100%;
+    height: 270px;
+}
+.main_mid_2 > a > img{
+    padding: 0 99px;
+    padding-top: 50px;
+}
+.main_mid_2 > a > p{
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 49px;
+    padding-bottom: 35px;
+}
+.main_mid_wrap > .main_mid_3{
+    width: 25%;
+    height: 270px;
+    text-align: center;
+    background-color: rgb(77, 27, 80);
+}
+.main_mid_3 > a{
+    width: 100%;
+    height: 270px;
+}
+.main_mid_3 > a > img{
+    padding: 0 99px;
+    padding-top: 50px;
+}
+.main_mid_3 > a > p{
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 39px;
+    padding-bottom: 35px;
+}
+.main_mid_wrap > .main_mid_4{
+    width: 25%;
+    height: 270px;
+    text-align: center;
+    background-color: rgb(118, 53, 122);
+}
+.main_mid_4 > a{
+    width: 100%;
+    height: 270px;
+}
+.main_mid_4 > a > img{
+    padding: 0 99px;
+    padding-top: 50px;
+}
+.main_mid_4 > a > p{
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 44px;
+    padding-bottom: 35px;
+}
+/* main_bot 부분 css 시작 */
+section .main_bot{
+    width: 100%;
+    height: 354px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+.main_bot > .main_bot_wrap{
+    width: 1200px;
+    height: 354px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_bot_wrap > .main_bot_left{
+    width: 75%;
+    height: 354px;
+}
+.main_bot_left > .main_bot_notice{
+    width: 100%;
+    height: 62px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 1px solid #e4e4e4;
+}
+.main_bot_notice > h3{
+    color: #222;
+    font-size: 24px;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-right: 700px;
+}
+.main_bot_notice > a{
+    color: #333;
+    font-size: 15px;
+}
+.main_bot_notice > a > span{
+    color: #222;
+    font-size: 24px;
+    font-weight: 600;
+}
+.main_bot_left > .main_bot_notice_list{
+    width: 100%;
+    height: 210px;
+}
+.main_bot_notice_list > ul{
+    width: 100%;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_bot_notice_list > ul > li{
+    position: relative;
+    width: 33.3333%;
+    height: 210px;
+    border-right: 1px solid #e4e4e4;
+}
+.main_bot_notice_list > ul > li:nth-child(3){
+    border-right: none;
+}
+.main_bot_notice_list > ul > li > a{
+    display: block;
+    height: 210px;
+    padding: 20px 25px;
+    color: #555;
+}
+.main_bot_notice_list > ul > li > a > .title{
+    color: #222;
+    font-size: 18px;
+    font-weight: 600;
+}
+.main_bot_notice_list > ul > li > a > .date{
+    font-size: 14px;
+    margin: 10px 0;
+} 
+.main_bot_notice_list > ul > li > a > .details{
+    font-size: 14px;
+    line-height: 1.5em;
+}
+.main_bot_notice_list > ul > li > a > .view{
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+
+    font-size: 14px;
+}
+.main_bot_left > .main_bot_family{
+    width: 100%;
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #b6b6b6;
+}
+.main_bot_family > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_bot_family > ul > li{
+    border-right: 1px solid #b6b6b6;
+}
+.main_bot_family > ul > li:nth-child(4){
+    border-right: none;
+}
+.main_bot_family > ul > li > a{
+    padding: 0 20px;
+}
+.main_bot_wrap > .main_bot_custom{
+    width: 25%;
+    height: 354px;
+    text-align: center;
+    background-color: #d0d0d0;
+}
+.main_bot_custom > a{
+    width: 100%;
+    height: 354px;
+}
+.main_bot_custom > a > img{
+    padding: 0 80px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+.main_bot_custom > a > h3{
+    color: #222;
+    font-size: 24px;
+}
+.main_bot_custom > a > p{
+    color: #5f5f5f;
+    font-size: 16px;
+    line-height: 1.5em;
+    padding-bottom: 70px;
+}
+/* section 부분 css 끝 */
+
+/* footer 부분 css 시작 */
+footer{
+    width: 100%;
+    height: 330px;
+    position: absolute;
+    top: 1304px;
+    left: 0;
+}
+/* footer_top 부분 css 시작 */
+footer .footer_top{
+    width: 100%;
+    height: 200px;
+    background-color: #3d3d3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_top > .footer_top_wrap{
+    width: 1200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_top_wrap > .navi_depth1{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_top_wrap > .navi_depth1 > li{
+    width: 25%;
+    height: 200px;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-left: 1px solid #5a5a5a;
+    border-right: 1px solid #5a5a5a;
+}
+.footer_top_wrap > .navi_depth1 > li > a{
+    color: white;
+    font-size: 18px;
+    line-height: 2.5em;
+}
+.footer_top_wrap > .navi_depth1 > li > .navi_depth2 > li > a{
+    color: #cdcdcd;
+    font-size: 14px;
+    line-height: 1.8em;
+}
+/* footer_bot 부분 css 시작 */
+footer .footer_bot{
+    width: 100%;
+    height: 130px;
+    background-color: #272727;
+    border-top: #5a5a5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_bot > .footer_bot_wrap{
+    width: 1200px;
+    height: 130px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.footer_bot_wrap > .info > p{
+    color: #cfcfcf;
+    font-size: 12px;
+    line-height: 1.8em;
+}
+.footer_bot_wrap > .info > p > a{
+    color: #cfcfcf;
+    font-size: 16px;
+}
+.footer_bot_wrap > .info > p > .highlight{
+    font-weight: 600;
+    text-decoration: underline;
+}
+.footer_bot_wrap > .info > .address{
+    font-size: 14px;
+}
+.footer_bot_wrap > .info span{
+    color: #5d5d5d;
+}
+/* footer 부분 css 끝 */

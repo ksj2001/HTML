@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body div{
+            width: 300px;
+            height: 200px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            text-align: right;
+            margin-top: 50px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #box1{
+            position: absolute;
+            background-color: red;
+            z-index: 3;
+        }
+        #box2{
+            position: absolute;
+            background-color: blue;
+            margin-left: 50px;
+            z-index: 2;
+        }
+        #box3{
+            position: absolute;
+            background-color: orange;
+            margin-left: 100px;
+            z-index: 1;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            /* transition은 속성을 지속시켜주는 애니매이션이다. */
+            transition: 0.5s;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: skyblue;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"> box1 </div>
+    <div id="box2"> box2 </div>
+    <div id="box3"> box3 </div>
+
+    <a href="#none">법적고지</a>
+    <a href="#none">개인정보취급방침</a>
+    <a href="#none">개인정보처리방침</a>
+</body>
+
+</html>

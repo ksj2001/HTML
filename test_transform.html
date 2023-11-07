@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        .container{
+            width: 100px;
+            height: 50px;
+            background-color: green;
+            border: 1px solid black;
+            color: white;
+            /* transform: translate(20px,100px);
+            transform: scale(1);
+            transform-origin: left top;
+            transform: skew(-20deg); */
+            animation-name: ani;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-delay: 1s;
+        }
+        .container:hover{
+            animation-play-state: paused;
+        }
+        @keyframes ani{
+            0%{
+                left: 0; top: 0;
+            }
+           /* 50%{
+                top: 0; right: 0;
+                transform: translatex(100px);
+            } */
+            100%{
+                right: 0; top: 0;
+                transform: translatex(-100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">html요소이동</div>
+</body>
+</html>

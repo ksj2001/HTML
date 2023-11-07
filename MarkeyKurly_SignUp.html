@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 - 컬리</title>
+    <script src="https://kit.fontawesome.com/82fd850f0d.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .container{
+            width: 640px;
+            margin: 0 auto;
+        }
+        .sec1{
+            margin: 50px 0;
+            font-size: 28px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .sec2{
+            padding-bottom: 10px;
+            border-bottom: 2px solid black;
+            font-size: 12px;
+            color: gray;
+            text-align: right;
+        }
+        .sec3{
+            padding
+        }
+        .sec4{
+
+        }
+        .sec5{
+
+        }
+        .sec6{
+
+        }
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: right;
+            font-size: 11px;
+            color: gray;
+        }
+        .line1{
+            width: 600px;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        form{
+            font-size: 12px;
+        }
+        .asterisk{
+            color: red;
+        }
+        label{
+            display: inline-block;
+            width: 100px;
+            margin: 10px;
+            font-weight: bold;
+        }
+        input[type=text]{
+            width: 250px;
+            padding: 7px 10px;
+            margin: 7px;
+            border: 1px solid lightgray;
+            border-radius: 3px;
+        }
+        input[type=password]{
+            width: 250px;
+            padding: 7px 10px;
+            margin: 7px;
+            border: 1px solid lightgray;
+            border-radius: 3px;
+        }
+        input[type=email]{
+            width: 250px;
+            padding: 7px 10px;
+            margin: 7px;
+            border: 1px solid lightgray;
+            border-radius: 3px;
+        }
+        .gendercontainer{
+            display: flex;
+        }
+        .gendercontainer input[type=radio]{
+            display: none;
+        }
+        .gendercontainer .ge2 label::before{
+            display: inline-block;
+            content: '\f192';
+            font-family: "Font Awesome 5 Free";
+            width: 20px;
+            height: 20px;
+            font-size: 18px;
+            border-radius: 50%;
+            border: 1px solid lightgray;
+            text-align: center;
+            line-height: 20px;
+            color: transparent;
+            margin-right: 10px;
+        }
+        input[type=checkbox]{
+            margin: 7px;
+        }
+        button{
+            width: 100px;
+            color: purple;
+            padding: 7px;
+            margin: 7px;
+            background-color: white;
+            border: 1px solid purple;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        #address{
+            width: 272px;
+        }
+        .exp{
+            margin-left: 130px;
+            font-size: 11px;
+            color: gray;
+        }
+        .line2{
+            width: 600px;
+            border: 1px solid gray;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #fullagree{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #sms{
+            margin-left: 155px;
+            font-size: 11px;
+            color: purple;
+        }
+        .line3{
+            width: 600px;
+            border: 1px solid whitesmoke;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #signup{
+            width: 200px;
+            height: 50px;
+            display: block;
+            color: white;
+            padding: 7px;
+            margin: auto;
+            background-color: purple;
+            border: 1px solid white;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- 회원가입란 전체 -->
+        
+        <div class="sec1"> <!-- "회원가입" -->
+            회원가입
+        </div> 
+        <div class="sec2"> <!-- "필수입력사항", 첫번째 구분선 -->
+            <span class="asterisk">*</span>필수입력사항
+        </div>
+        <div class="sec3"> <!-- "아이디"~"추가입력 사항" -->
+
+        </div>
+        <div class="sec4"> <!-- 두번째 구분선 -->
+
+        </div>
+        <div class="sec5"> <!-- "이용약관동의" -->
+
+        </div>
+        <div class="sec6"> <!-- 세번째 구분선, "가입하기" -->
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h2>회원가입</h2>
+        <p><span class="asterisk">*</span>필수입력사항</p><br>
+        <div class="line1"></div><br>
+    <form action="">
+        <label for="">아이디<span class="asterisk">*</span></label>
+        <input type="text" placeholder="아이디를 입력해주세요">
+        
+        <button type="button">중복확인</button><br>
+        <label for="">비밀번호<span class="asterisk">*</span></label>
+        <input type="password" placeholder="비밀번호를 입력해주세요"><br>
+        <label for="">비밀번호확인<span class="asterisk">*</span></label>
+        <input type="password" placeholder="비밀번호를 한번 더 입력해주세요"><br>
+        <label for="">이름<span class="asterisk">*</span></label>
+        <input type="text" placeholder="이름을 입력해 주세요"><br>
+        <label for="">이메일<span class="asterisk">*</span></label>
+        <input type="email" placeholder="예: marketkurly@kurly.com">
+        <button type="button">중복확인</button><br>
+        <label for="">휴대폰<span class="asterisk">*</span></label>
+        <input type="text" placeholder="숫자만 입력해주세요.">
+        <button type="button">인증번호 받기</button><br>
+        <label for="">주소<span class="asterisk">*</span></label>
+        <button type="button" id="address">주소 검색</button><br>
+        <span class="exp">배송지에 따라 상품 정보가 달라질 수 있습니다.</span><br>
+    
+        <div class="gendercontainer">
+            <div class="ge">
+                <label for="">성별</label>
+            </div>
+            <div class="ge2">
+                <input type="radio" name="Gender" id="gender1"><label for="gender1">남자</label>
+                <input type="radio" name="Gender" id="gender2"><label for="gender2">여자</label>
+                <input type="radio" name="Gender" id="gender3" checked><label for="gender3">선택안함</label>
+            </div>
+    
+        </div>
+        <br>
+        <label for="">생년월일</label>
+        <input type="text" placeholder="YYYY / MM / DD"><br>
+        <label for="">추가입력 사항</label>
+        <div class="friendcontainer">
+    
+            <input type="radio" name="add" id="friend1"><label for="friend1">친구초대 추천인 아이디</label>
+            <input type="radio" name="add" id="friend2"><label for="friend2">참여 이벤트명</label>
+        </div>
+    
+        <div class="line2"></div>
+        <label for="">이용약관동의</label>
+        <input type="checkbox">
+        <span id="fullagree">전체 동의합니다.</span> <br>
+        <span class="exp">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</span><br>
+        <label for=""></label>
+        <input type="checkbox">이용약관 동의
+        <span class="detail">(필수)</span><br>
+        <label for=""></label>
+        <input type="checkbox">개인정보 수집·이용 동의
+        <span class="detail">(필수)</span><br>
+        <label for=""></label>
+        <input type="checkbox">개인정보 수집·이용 동의
+        <span class="detail">(선택)</span><br>
+        <label for=""></label>
+        <input type="checkbox">무료배송,할인쿠폰 등 혜택/정보 수신 동의
+        <span class="detail">(선택)</span><br>
+        <label for=""></label>
+        <input type="checkbox">SMS
+        <input type="checkbox">이메일<br>
+        <span id="sms">동의 시 한 달간 [5%적립]+[2만원 이상 무료배송] 첫 주문 후 안내</span><br>
+        <label for=""></label>
+        <input type="checkbox">본인은 만 14세 이상입니다.
+        <span class="detail">(필수)</span><br>
+        <div class="line3"></div>
+        <button type="submit" id="signup">가입하기</button>
+    </form>
+    </div>
+</body>
+</html>

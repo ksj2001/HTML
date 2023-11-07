@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃1</title>
+    <style>
+        .container{
+            width: 1200px;
+            border: 1px solid black;
+        }
+        header{
+            height: 100px;
+            background-color: blue;
+        }
+        nav{
+            height: 100px;
+            background-color: lightblue;
+        }
+        section{
+            width: 800px;
+            height: 900px;
+            background-color: yellow;
+            float: left;
+            position: relative;
+        }
+        article{
+            width: 800px;
+            height: 300px;
+            background-color: lightseagreen;
+            float: left;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        aside{
+            width: 400px;
+            height: 900px;
+            background-color: red;
+            float: right;
+        }
+        footer{
+            height: 100px;
+            background-color: blue;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header></header>
+        <nav></nav>
+        <section>
+            <article></article>
+        </section>
+        <aside></aside>
+        <footer></footer>
+    </div>
+</body>
+</html>

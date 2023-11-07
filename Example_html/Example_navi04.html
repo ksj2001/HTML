@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            color: #222;
+            line-height: 1.5em;
+        }
+        .dropdown-btn{
+            display: block;
+            width: 100px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            position: relative;
+        }
+        .dropdown-submenu{
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            /* position: absolute는 반드시 좌표를 지정해줘야 한다. */
+            left: 100%;
+            top: 0;
+            display: none;
+            background-color: #eee;
+        }
+        .dropdown-submenu a{
+            display: block;
+            padding: 10px;
+        }
+        .dropdown-btn:hover{
+            color: purple;
+            text-decoration: underline;
+        }
+        .dropdown-btn:hover .dropdown-submenu{
+            display: block;
+        }
+        .dropdown-submenu a:hover{
+            color: purple;
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropdown-btn">웹개발
+          <div class="dropdown-submenu">
+            <a href="#">HTML/CSS</a>
+            <a href="#">JavaScript</a>
+            <a href="#">React</a>
+          </div>
+        </button>
+        <button class="dropdown-btn">백앤드
+          <div class="dropdown-submenu">
+            <a href="#">Java</a>
+            <a href="#">Spring</a>
+            <a href="#">Python</a>
+          </div>
+        </button>
+        <button class="dropdown-btn">게임개발
+          <div class="dropdown-submenu">
+            <a href="#">C#</a>
+            <a href="#">C++</a>
+            <a href="#">Scratch</a>
+          </div>
+        </button>
+    </div>
+</body>
+</html>

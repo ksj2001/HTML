@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>컬리</title>
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://kit.fontawesome.com/82fd850f0d.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #eee;
+        }
+        header{
+            background-color: white;
+            /* border: 1px solid red; */
+        }
+        /* img{
+            width: 30px;
+            height: 30px;
+        } */
+        .header1{
+            width: 1000px;
+            height: 40px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: flex-end;
+            position: relative;
+            /* border: 1px solid blue; */
+        }
+        .header1 .depth1 li > a{
+            font-size: 12px;
+            color: gray;
+        }
+        .header1 #signup > a{
+            color: purple;
+        }
+        .header1 .depth1{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .header1 .depth1 > li{
+            display: block;
+            line-height: 2em;
+            margin: 10px;
+            position: relative;
+        }
+        .header1 .depth2{
+            display: none;
+            width: 100px;
+            padding: 0 10px;
+            border: 1px solid lightgray;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            z-index: 1;
+        }
+        .header1 .depth2 > li{
+            line-height: 2em;
+            position: relative;
+        }
+        .header1 .depth1 > li:hover >.depth2{
+            display: block;
+        }
+        .header2{
+            width: 1000px;
+            height: 100px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            /* border: 1px solid red; */
+        }
+        .header2 .kurly > .depth1 > li > a{
+            font-size: 20px;
+            font-weight: bold;
+            color: purple;
+        }
+        .header2 .kurly > .depth1 > li:nth-child(1) > a{
+            font-size: 30px;
+        }
+      
+        .header2 .kurly #beauty > a{
+            color: lightgray;
+        }
+        .header2 .kurly .depth1{
+            display: flex;
+            justify-content: center;
+        }
+        .header2 .kurly .depth1 > li{
+            display: block;
+            line-height: 3em;
+            margin: 15px;
+        }
+        .header2 .search {
+            display: flex;
+            position: relative;
+            width: 400px;
+            align-items: center;
+        }
+        .header2 .search input{
+            width: 100%;
+            height: 50px;
+            border: 1px solid purple;
+            border-radius: 5px;
+            padding: 0 15px;
+            font-size: 15px;
+        }
+        .header2 .search a{
+            position: absolute;
+            color: purple;
+            font-size: 18px;
+            right: 15px;
+        }
+        .header2 .button .depth1{
+            display: flex;
+            justify-content: center;
+        }
+        .header2 .button .depth1 > li{
+            display: block;
+            line-height: 3em;
+            margin: 25px;
+        }
+        .header2 .button a{
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 24px;
+            color: gray;
+        }
+        .header2 .kurly .depth1 #beauty a:hover{
+            color: purple;
+        }
+        .header2 .button .depth1 li a:hover{
+            color: purple;
+        }
+        .header3{
+            width: 1000px;
+            height: 60px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            /* border: 1px solid green; */
+        }
+        .header3 .category .depth1 > li{
+            width: 185px;
+            height: 60px;
+            margin-left: 15px;
+            line-height: 3.5em;
+            text-align: left;
+            position: relative;
+        }
+        .header3 .category .depth1 > li > a{
+            font-weight: bold;
+        }
+        .header3 .category .depth1 > li > a:hover{
+            color: purple;
+        }
+        .header3 .category .depth1 > li:hover > .depth2{
+            display: block;
+        }
+        .header3 .category .depth2{
+            display: none;
+            width: 185px;
+            position: absolute;
+            border: 1px solid lightgray;
+            background-color: white;
+            padding-left: 15px;
+            margin-left: -15px;
+            margin-top: 4px;
+        }
+        .header3 .category .depth2 > li{
+            display: block;
+            line-height: 3em;
+            position: relative;
+        }
+        .header3 .category .depth2 > li > a:hover{
+            color: purple;
+            font-weight: bold;
+        }
+        .header3 .category .depth2 > li:hover > .depth3{
+            display: block;
+        }
+        .header3 .category .depth3{
+            display: none;
+            width: 220px;
+            position: absolute;
+            border: 1px solid lightgray;
+            background-color: white;
+            top: -1px;
+            left: 100%;
+            padding-left: 15px;
+        }
+        .header3 .category .depth3 > li{
+            display: block;
+            line-height: 3em;
+        }
+        .header3 .category .depth3 > li > a:hover{
+            color: purple;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .header3 .menu{
+            display: flex;
+            justify-content: center;
+        }
+        .header3 .menu > li{
+            display: block;
+            margin: 0 40px;
+        }
+        .header3 .menu > li > a{
+            font-weight: bold;
+            color: rgb(50, 50, 50);
+        }
+        .header3 .menu > li > a:hover{
+            color: purple;
+            text-decoration: underline;
+        }
+        .header3 .deliveryinfo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid lightgray;
+            border-radius: 15px;
+            width: 140px;
+            height: 30px;
+        }
+        .header3 .deliveryinfo > a{
+            color: gray;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .header3 .deliveryinfo > a > span{
+            color: purple;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        /* section css */
+        section{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+   
+        section .banner {
+            width: 1902px;
+            height: 372px;
+            /* position: relative; */
+            /* border: 1px solid red; */
+            /* background-image: url(images/5de12c62-c497-4693-bd35-93c3a9f36aad.jpg);
+            background-repeat: no-repeat; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header1">
+            <ul class="depth1">
+                <li id="signup"><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">고객센터</a>
+                    <ul class="depth2">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자주하는 질문</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">대량주문 문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="header2">
+            <div class="kurly">
+                <ul class="depth1">
+                    <li><a href="#">Kurly</a></li>
+                    <li><a href="#">마켓컬리</a></li>
+                    <li id="beauty"><a href="#">뷰티컬리</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="검색어를 입력해주세요">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            <div class="button">
+                <ul class="depth1">
+                    <li><a href=""><i class="fa-solid fa-location-dot"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header3">
+            <div class="category">
+                <ul class="depth1">
+                    <li>
+                        <a href="#">카테고리</a>
+                        <ul class="depth2">
+                            <li><a href="#">채소</a>
+                                <ul class="depth3">
+                                    <li><a href="#">친환경</a></li>
+                                    <li><a href="#">고구마·감자·당근</a></li>
+                                    <li><a href="#">시금치·쌈채소·나물</a></li>
+                                    <li><a href="#">브로콜리·파프리카·양배추</a></li>
+                                    <li><a href="#">양파·대파·마늘·배추</a></li>
+                                    <li><a href="#">오이·호박·고추</a></li>
+                                    <li><a href="#">냉동·이색·간편채소</a></li>
+                                    <li><a href="#">콩나물·버섯</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">과일·견과·쌀</a>
+                                <ul class="depth3">
+                                    <li><a href="#">친환경</a></li>
+                                    <li><a href="#">제철과일</a></li>
+                                    <li><a href="#">국산과일</a></li>
+                                    <li><a href="#">수입과일</a></li>
+                                    <li><a href="#">간편과일</a></li>
+                                    <li><a href="#">냉동·건과일</a></li>
+                                    <li><a href="#">견과류</a></li>
+                                    <li><a href="#">쌀·잡곡</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">수산·해산·건어물</a>
+                                <ul class="depth3">
+                                    <li><a href="#">제철수산</a></li>
+                                    <li><a href="#">생선류</a></li>
+                                    <li><a href="#">굴비·반건류</a></li>
+                                    <li><a href="#">오징어·낙지·문어</a></li>
+                                    <li><a href="#">새우·게·랍스터</a></li>
+                                    <li><a href="#">해산물·조개류</a></li>
+                                    <li><a href="#">수산가공품</a></li>
+                                    <li><a href="#">김·미역·해조류</a></li>
+                                    <li><a href="#">건어물·다시팩</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">정육·계란</a>
+                                <ul class="depth3">
+                                    <li><a href="#">국내산 소고기</a></li>
+                                    <li><a href="#">수입산 소고기</a></li>
+                                    <li><a href="#">돼지고기</a></li>
+                                    <li><a href="#">계란류</a></li>
+                                    <li><a href="#">닭·오리고기</a></li>
+                                    <li><a href="#">양념육·돈까스</a></li>
+                                    <li><a href="#">양고기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">국·반찬·메인요리</a>
+                                <ul class="depth3">
+                                    <li><a href="#">국·탕·찌개</a></li>
+                                    <li><a href="#">밀키트·메인요리</a></li>
+                                    <li><a href="#">밑반찬</a></li>
+                                    <li><a href="#">김치·젓갈·장류</a></li>
+                                    <li><a href="#">두부·어묵·부침개</a></li>
+                                    <li><a href="#">베이컨·햄·통조림</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">샐러드·간편식</a>
+                                <ul class="depth3">
+                                    <li><a href="#">샐러드·닭가슴살</a></li>
+                                    <li><a href="#">도시락·밥류</a></li>
+                                    <li><a href="#">파스타·면류</a></li>
+                                    <li><a href="#">떡볶이·튀김·순대</a></li>
+                                    <li><a href="#">피자·핫도그·만두</a></li>
+                                    <li><a href="#">폭립·떡갈비·안주</a></li>
+                                    <li><a href="#">죽·스프·카레</a></li>
+                                    <li><a href="#">선식·시리얼</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">면·양념·오일</a>
+                                <ul class="depth3">
+                                    <li><a href="#">파스타·면류</a></li>
+                                    <li><a href="#">식초·소스·드레싱</a></li>
+                                    <li><a href="#">양념·액젓·장류</a></li>
+                                    <li><a href="#">식용유·참기름·오일</a></li>
+                                    <li><a href="#">소금·설탕·향신료</a></li>
+                                    <li><a href="#">밀가루·과일·믹스</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">생수·음료·우유·커피</a>
+                                <ul class="depth3">
+                                    <li><a href="#">생수·탄산수</a></li>
+                                    <li><a href="#">음료·주스</a></li>
+                                    <li><a href="#">우유·두유·요거트</a></li>
+                                    <li><a href="#">커피</a></li>
+                                    <li><a href="#">차</a></li>
+                                    <li><a href="#">커피용품</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <li><a href="#">신상품</a></li>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">알뜰쇼핑</a></li>
+                <li><a href="#">특가/혜택</a></li>
+            </div>
+            <div class="deliveryinfo">
+                <a href="#"><span>샛별 · 택배</span> 배송안내</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="banner">
+            <img src="images/5de12c62-c497-4693-bd35-93c3a9f36aad.jpg" alt="">
+        </div>
+    </section>
+</body>
+</html>

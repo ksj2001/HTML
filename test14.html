@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 CSS</title>
+    <style>
+        caption {
+            caption-side: top;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        table {
+            width: 700px;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        th,td {
+            padding: 8px;
+            height: 50px;
+            text-align: center;
+            vertical-align: top;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #8eba41;
+            color: white;
+        }
+        tfoot {
+            background-color: cadetblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>크린토피아 남성의료 가격표 </caption>
+        <thead>
+            <tr>
+                <th>품목</th>
+                <th>일반요금</th>
+                <th>로얄요금</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>와이셔츠</td>
+                <td>2,000</td>
+                <td>1,800</td>
+            </tr>
+            <tr>
+                <td>남방</td>
+                <td>2,600</td>
+                <td>4,000</td>
+            </tr>
+            <tr>
+                <td>정장 상의</td>
+                <td>3,300</td>
+                <td>5,200</td>
+            </tr>
+            <tr>
+                <td>정장 하의</td>
+                <td>2,800</td>
+                <td>4,000</td>
+            </tr>
+            <tr>
+                <td>양복/예복 조끼</td>
+                <td>1,300</td>
+                <td>2,600</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">크린토피아 고객센터 : 080-888-8888 / 상담 시간 : 오전 9:00~오후 6:00</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

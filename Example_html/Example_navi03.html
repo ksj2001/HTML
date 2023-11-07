@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        /* .dropdown-depth1{
+            display: flex;
+        } */
+        .dropdown .dropdown-depth1 > li{
+            display: inline-block;
+            width: 130px;
+            vertical-align: top;
+            text-align: center;
+            background-color: #eee;
+            margin-left: -6px;
+        }
+        .dropdown-depth1 > li > a{
+            padding: 10px 0;
+            display: block;
+        }
+        .dropdown-depth1 > li:hover  > a {
+            background-color: purple;
+            color: white;
+        }
+        .dropdown-depth1 > li:hover > .dropdown-depth2  {
+            display: block;
+        }
+        /* depth2에 hover 되면 배경색이 변경되고
+        a태그에 hover되면 underline을 지정하는 css */
+        .dropdown-depth2 {
+            display: none;
+            background-color: lightpink;
+        }
+        .dropdown-depth2 a{
+            padding: 10px 0;
+            display: block;
+        }
+        .dropdown-depth2 li a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <ul class="dropdown-depth1">
+            <li>
+                <a href="#">menu1</a>
+                <ul class="dropdown-depth2">
+                    <li><a href="#">submenu-1</a></li>
+                    <li><a href="#">submenu-2</a></li>
+                    <li><a href="#">submenu-3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu2</a>
+                <ul class="dropdown-depth2">
+                    <li><a href="#">submenu-1</a></li>
+                    <li><a href="#">submenu-2</a></li>
+                    <li><a href="#">submenu-3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu3</a>
+                <ul class="dropdown-depth2">
+                    <li><a href="#">submenu-1</a></li>
+                    <li><a href="#">submenu-2</a></li>
+                    <li><a href="#">submenu-3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu4</a>
+                <ul class="dropdown-depth2">
+                    <li><a href="#">submenu-1</a></li>
+                    <li><a href="#">submenu-2</a></li>
+                    <li><a href="#">submenu-3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

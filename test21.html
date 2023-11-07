@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .tab-inner{
+            width: 400px;
+        }
+        .btn span{
+            background-color: white;
+            width: 120px;
+            display: inline-block;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px 5px 0 0;
+            /* a태그가 아닌 다른 태그에 링크 포인터 모양이 표시됨 */
+            cursor: pointer;
+            border: 1px solid black;
+            /* display를 inline-block으로 변경하게 되면 요소들 사이에 margin이 생긴다. margin을 없애려면 왼쪽으로 margin을 당겨와야 한다. */
+            margin-left: -6px;
+        }
+        .btn span:last-child{
+            background-color: darkgray;
+            color: white;
+        }
+        .tab{
+            width: 260px;
+            border: 1px solid black;
+        }
+        .tab a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid black;
+        }
+        .tab a:last-child{
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="tab-inner">
+        <div class="btn"> 
+            <span>공지사항</span> <span>갤러리</span>
+        </div>
+        <div class="tab">
+            <a href="#none">sms 발송 서비스 개선작업</a>
+            <a href="#none">sms 발송 서비스 개선작업</a>
+            <a href="#none">sms 발송
+                서비스 개선작업</a>
+            <a href="#none">sms 발송 서비스 개선작업</a>
+            <a href="#none">sms 발송 서비스 개선작업</a>
+        </div>
+    </div>
+</body>
+
+</html>
